@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>Designed by YourCompany</p>
+        <a>Designed by YourCompany</a>
       </div>
     </footer>
   );

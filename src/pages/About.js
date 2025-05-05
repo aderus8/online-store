@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import Header from '../components/header/Header';
 
 
 const About = () => {
@@ -6,6 +7,9 @@ const About = () => {
 
   return (
     <div className="App">
+                <Header
+                title="Individual approach. Professional support." 
+            />
     <header>
       <h1>To jest Nagłówek H1</h1>
       <h2>To jest Nagłówek H2</h2>

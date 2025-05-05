@@ -1,1 +1,14 @@
-export default function Home() { return <h1>Home Page</h1>; }
+import React, { useState, useRef, useEffect } from 'react';
+
+
+const Home = () => {
+
+
+  return (
+    <div className="App">
+        <h1> HOME </h1>
+  </div>
+  )
+};
+
+export default Home;

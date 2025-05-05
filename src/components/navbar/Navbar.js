@@ -47,7 +47,8 @@ const Navbar = () => {
 
       {!isMobile && (
         <div className="nav-links">
-          <NavLink to="/" end>Coach</NavLink>
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/coaches">Coaches</NavLink>
           <NavLink to="/about">Offer</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </div>
@@ -89,6 +90,11 @@ const Navbar = () => {
             <NavLink to="/" end onClick={() => setIsMenuOpen(false)} className="mobile-link">
               <div className='h3-nav'>Home</div>
               <FaArrowRight className="arrow-icon" />
+            </NavLink>
+
+            <NavLink to="/coaches" onClick={() => setIsMenuOpen(false)} className="mobile-link">
+            <div className='h3-nav'>Coaches</div>
+            <FaArrowRight className="arrow-icon" />
             </NavLink>
 
             <NavLink to="/about" onClick={() => setIsMenuOpen(false)} className="mobile-link">

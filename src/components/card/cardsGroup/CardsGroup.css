@@ -1,0 +1,16 @@
+.trainer-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .trainer-card-group > * {
+    width: 300px; /* lub dowolna stała szerokość */
+    flex: 0 0 auto; /* NIE pozwala się rozciągać ani kurczyć */
+  }
+
+  

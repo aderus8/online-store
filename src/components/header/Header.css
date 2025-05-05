@@ -1,8 +1,8 @@
 .header-container {
     text-align: center;
-    /* padding: 0rem 2rem; */
     margin-bottom: 2rem;
-    max-width: 95%;
+    max-width: 100%;
+    padding: 0rem 2rem;
 }
 
 .header-container::after {

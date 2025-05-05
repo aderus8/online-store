@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-between;
     transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
-    z-index: 1000;
+    z-index: 2000;
     box-shadow: none;
     background-color: rgba(255, 255, 255, 0);
 }
@@ -165,38 +165,37 @@ body.dark .navbar.scrolled {
         transform: rotate(5deg);
     }
 
+    /* MOBILE NAVIGATION */
     .mobile-nav-links {
         position: fixed;
+        top: 0;
+        right: 0;
         width: 75%;
         min-height: 100%;
-        right: 0;
-        top: 0px;
         background-color: inherit;
-        overflow-y: auto;
         box-shadow: 0 1px 7px rgba(97, 31, 31, 0.4);
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1rem 0;
-        padding-bottom: 30rem;
+        padding-bottom: 20rem;
         z-index: 999;
-        transform: translateX(100%);
-        opacity: 0;
-        pointer-events: none;
-        max-height: 100vh;
-        -webkit-overflow-scrolling: touch;
+        transform: translateX(100%); /* Menu początkowo poza ekranem */
+        opacity: 0; /* Menu początkowo niewidoczne */
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Płynna animacja */
+        overflow-y: auto; /* Umożliwia przewijanie poziome */
     }
 
     .mobile-nav-links.slide-in {
-        opacity: 1;
-        transform: translateX(0%);
-        pointer-events: auto;
+        transform: translateX(0); /* Menu wjeżdża */
+        opacity: 1; /* Menu staje się widoczne */
+        pointer-events: auto; /* Menu staje się interaktywne */
     }
 
     .mobile-nav-links.slide-out {
-        opacity: 0;
-        transform: translateX(100%);
-        pointer-events: none;
+        transform: translateX(100%); /* Menu wyjeżdża poza ekran */
+        opacity: 0; /* Menu staje się niewidoczne */
+        pointer-events: none; /* Menu staje się nieinteraktywne */
     }
 
     .mobile-nav-links a {
@@ -219,12 +218,15 @@ body.dark .navbar.scrolled {
 
     .mobile-nav-links a svg {
         transition: transform 0.5s ease;
+        font-size: clamp(1.4rem, 6vw, 1.8rem);
+
     }
 
     .mobile-nav-links a:hover svg {
         color: #f0c000;
     }
 
+    /* Przycisk zamknięcia menu */
     .menu-close-box {
         width: 100%;
         display: flex;
@@ -246,7 +248,7 @@ body.dark .navbar.scrolled {
     }
 
     body.light .mobile-nav-links {
-        background: linear-gradient(145deg, #ffffff, #dcdcdcfc, #f5f5f5);
+        background: linear-gradient(145deg, #ffffff, #ececec, #f5f5f5);
     }
 
     body.dark .mobile-nav-links {
@@ -262,7 +264,6 @@ body.dark .navbar.scrolled {
         color: var(--text-color);
         font-size: clamp(0.8rem, 3vw, 1rem);
         transition: background 0.3s ease;
-
     }
 
     .nav-mobile-text {

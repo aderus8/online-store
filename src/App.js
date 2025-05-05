@@ -8,6 +8,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import Footer from './components/footer/Footer';
+import Coaches from './pages/coaches/Coaches';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/coaches" element={<Coaches />} />
               <Route path="/contact" element={<Contact />} />
               {/* <Route path="/auth" element={<Auth />} /> */}
             </Routes>
