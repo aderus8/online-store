@@ -4,6 +4,7 @@
     /* background: linear-gradient(to bottom right, #222, #111); */
     padding: 2rem 2rem;
     animation: fadeInUp 1.2s ease-out;
+    margin-top: 60px;
 }
 
 /* Animacja wchodzenia z dołu (fade-in-up) */

@@ -1,6 +1,5 @@
 body {
   font-family: 'Satoshi', sans-serif;
-  margin-top: 80px;
 }
 
 body.light {
@@ -108,4 +107,8 @@ small {
   small {
     font-size: 0.7rem;
   }
+}
+
+.mt{
+  margin-top: 80px;
 }
