@@ -1,0 +1,102 @@
+.header-container {
+    text-align: center;
+    /* padding: 0rem 2rem; */
+    margin-bottom: 2rem;
+    max-width: 95%;
+}
+
+.header-container::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    margin: 0 auto;
+    margin-top: 14px;
+    background: linear-gradient(to right, #555, #888, #555);
+    box-shadow: 0 0 5px rgba(138, 138, 138, 0.7);
+    /* subtelny efekt świetlny */
+    animation: drawLine 1.5s ease-out forwards;
+    border-radius: 20px;
+}
+
+/* Tryb ciemny - metaliczny szary z ciemniejszym cieniem */
+body.dark .header-container::after {
+    background: linear-gradient(to right, #fff2b2, #ffd700, #ffaa00);
+    /* ciemniejszy metaliczny szary */
+    box-shadow: 0 0 5px rgba(85, 85, 85, 0.6);
+    /* delikatniejszy cień */
+}
+
+/* Animacja linii */
+@keyframes drawLine {
+    to {
+        width: 180px;
+    }
+}
+
+
+.typing-effect {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Satoshi', sans-serif;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.typing-effect span {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeInChar 0.1s ease forwards;
+}
+
+@keyframes fadeInChar {
+    to {
+        opacity: 1;
+        transform: translateY(5px);
+        animation: fadeInChar 0.4s ease forwards;
+    }
+}
+
+.typing-subtitle {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInSubtitle 1s ease forwards;
+    animation-delay: 2.5s;
+    color: #444;
+    font-family: 'Satoshi', sans-serif;
+}
+
+
+body.dark .header-container::after {
+    /* background: linear-gradient(to right, #444, #666, #888);  */
+    /* box-shadow: 0 0 3px rgba(188, 144, 1, 0.445);  */
+}
+
+@keyframes fadeInSubtitle {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tryb ciemny */
+body.dark .typing-subtitle {
+    color: #ccc;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .typing-effect {
+        font-size: 1.4rem;
+    }
+
+    .typing-subtitle {
+        font-size: 1rem;
+    }
+
+
+}

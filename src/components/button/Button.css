@@ -1,0 +1,97 @@
+.cta-button{
+    margin-top: 1.8rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  /* Bazowy styl */
+  .cta-button-get {
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+  }
+  .cta-button-get:hover{
+    text-decoration: none;
+
+  }
+  
+  /* Warianty kolorystyczne */
+  
+  .cta-button-get.gold {
+    background: linear-gradient(145deg, #fff2b2, #ffd700, #ffaa00);
+    color: black;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+  }
+  .cta-button-get.gold:hover {
+    background-color: #d4a900;
+    transform: translateX(5px);
+    transform: scale(1.05);
+    text-decoration: none;
+  }
+  
+  .cta-button-get.grey {
+    background: linear-gradient(145deg, #e0e0e0, #c0c0c0, #a0a0a0);
+    color: #222;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+  }
+  .cta-button-get.grey:hover {
+    background: #999;
+    transform: scale(1.05) translateX(5px);
+    text-decoration: none;
+
+  }
+  
+  .cta-button-get.blue {
+    background: linear-gradient(145deg, #3a7bd5, #00d2ff);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+  }
+  .cta-button-get.blue:hover {
+    background: #217ec9;
+    transform: scale(1.05) translateX(5px);
+    text-decoration: none;
+
+  }
+  
+  .cta-button-get.red {
+    background: linear-gradient(145deg, #ff4e50, #f00000);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+  }
+  .cta-button-get.red:hover {
+    background: #cc0000;
+    transform: scale(1.05) translateX(5px);
+    text-decoration: none;
+  }
+  
+  .cta-button-get.black {
+    background: #111;
+    color: white;
+  }
+  .cta-button-get.black:hover {
+    background: #000;
+    transform: scale(1.05) translateX(5px);
+    text-decoration: none;
+  }
+  
+  .cta-button-get.light {
+    background: linear-gradient(145deg, #ffffff, #eeeeee, #dddddd);
+    color: #000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+  }
+  .cta-button-get.light:hover {
+    background: #ccc;
+    transform: scale(1.05) translateX(5px);
+    text-decoration: none;
+  }
+  

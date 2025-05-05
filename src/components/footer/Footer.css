@@ -1,0 +1,87 @@
+/* ====== Footer (wspólne style) ====== */
+.footer {
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08); /* Delikatny cień od góry */
+  margin-top: 5px;
+  margin-bottom: 0;
+  height: 180px;
+}
+
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .footer-content p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.footer .social-icons {
+  margin-top: 1rem;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-links {
+  margin-top: 1rem;
+}
+
+.footer .footer-links a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+/* ====== Footer light (zamienione na dark) ====== */
+body.light .footer {
+  background-color: #f5f5f5;
+  color: #111;
+}
+
+body.light .footer .footer-content p,
+body.light .footer .footer-bottom,
+body.light .footer .social-icons a,
+body.light .footer .footer-links a {
+  color: #333;
+}
+
+body.light .footer .social-icons a:hover,
+body.light .footer .footer-links a:hover {
+  color: #f0c000;
+}
+
+/* ====== Footer dark (zamienione na light) ====== */
+body.dark .footer {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 -4px 12px rgba(62, 62, 62, 0.421); /* Delikatny cień od góry */
+
+}
+
+body.dark .footer .footer-content p,
+body.dark .footer .footer-bottom,
+body.dark .footer .social-icons a,
+body.dark .footer .footer-links a {
+  color: #ccc;
+}
+
+body.dark .footer .social-icons a:hover,
+body.dark .footer .footer-links a:hover {
+  color: #f0c000;
+}
