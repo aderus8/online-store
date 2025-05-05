@@ -1,0 +1,100 @@
+/* Wspólne style */
+.section-header-wrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  font-family: 'Satoshi', sans-serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+  /* text-transform: uppercase; */
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to right, #ffd700, #ffb700, #ff9900); /* domyślnie złoty */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.5s ease;
+}
+
+.section-header::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 0;
+  margin: 0 auto;
+  margin-top: 14px;
+  background: linear-gradient(to right, #fff2b2, #ffd700, #ffaa00);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  animation: drawLine 1.5s ease-out forwards;
+  border-radius: 20px;
+} 
+
+/* Animacja linii */
+ @keyframes drawLine {
+  to {
+    width: 180px;
+  }
+}
+
+
+.section-subtitle {
+  font-family: 'Satoshi', sans-serif;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #bbb;
+  letter-spacing: 1px;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark mode */
+body.light .section-header {
+  background: linear-gradient(to right, #636363, #575757, #242424); /* mocniejszy kontrast */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+body.light .section-header::after {
+  background: linear-gradient(to right, #222, #444);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+body.light .section-subtitle {
+  color: #4a4a4a;
+}
+
+/* Light mode */
+body.dark .section-header {
+  background: linear-gradient(to right, #ffda44, #ffc300, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.dark .section-header::after {
+  background: linear-gradient(to right, #fff3c1, #ffd700, #ffb300);
+  box-shadow: 0 0 8px rgba(255, 200, 0, 0.6);
+}
+
+body.dark .section-subtitle {
+  color: #6e6e6e;
+}
+
+/* Responsywność */
+@media screen and (max-width: 768px) {
+  .section-header {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}

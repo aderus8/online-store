@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import Header from '../../components/header/Header';
-import Card from '../../components/card/Card';
+import "./Coaches.css";
 import CardsGroup from '../../components/card/cardsGroup/CardsGroup';
+import SectionHeader from '../../components/header/sectionHeader/SectionHeader';
 
 const trainers = [
     {
@@ -61,11 +62,7 @@ const Coaches = () => {
   return (
     <div className="home-container">
 
-
-        {/* <SectionHeader
-        title="OUR COACHES"/> */}
-
-        <Header 
+        <SectionHeader
         title="Professional support and experience at every level."
         // subtitle="Professional support and experience at every level."
         />

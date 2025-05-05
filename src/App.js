@@ -9,6 +9,7 @@ import './App.css';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import Footer from './components/footer/Footer';
 import Coaches from './pages/coaches/Coaches';
+import Auth from './pages/auth/Auth';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/coaches" element={<Coaches />} />
               <Route path="/contact" element={<Contact />} />
-              {/* <Route path="/auth" element={<Auth />} /> */}
+              <Route path="/auth" element={<Auth />} />
             </Routes>
           </main>
           <Footer/>

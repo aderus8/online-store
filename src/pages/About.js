@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Header from '../components/header/Header';
+import SectionHeader from '../components/header/sectionHeader/SectionHeader';
 
 
 const About = () => {
@@ -7,7 +8,7 @@ const About = () => {
 
   return (
     <div className="App">
-                <Header
+                <SectionHeader
                 title="Individual approach. Professional support." 
             />
     <header>
