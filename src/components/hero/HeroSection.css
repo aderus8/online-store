@@ -45,7 +45,7 @@
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block; /* ← bardzo ważne */
+    /* display: inline-block; ← bardzo ważne */
   }
   
   .hero-video-cta-button:hover {
