@@ -5,7 +5,9 @@ body {
 body.light {
   background-color: #fff;
   color: #000;
-  background: linear-gradient(135deg, #ffffffe0, #edece9b0, #ffffff),
+  background: linear-gradient(135deg, #f1f4f7, #ebeffc),
+
+  /* background: linear-gradient(135deg, #ffffffe0, #edece9b0, #ffffff), */
   url("https://i.pinimg.com/736x/8e/7e/27/8e7e2723ae6b6839ebbbc29b0c31ce37.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -15,7 +17,7 @@ body.light {
 body.dark {
   background-color: #121212;
   color: #fff;
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95), rgba(30, 30, 30, 0.95)),
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.90), rgba(30, 30, 30, 0.90)),
   url("https://i.pinimg.com/736x/8e/7e/27/8e7e2723ae6b6839ebbbc29b0c31ce37.jpg");
   background-size: cover;
   background-attachment: fixed;

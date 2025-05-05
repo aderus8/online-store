@@ -1,0 +1,64 @@
+/* Sekcja parallax */
+.coach-home-section {
+    position: relative;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://polskieradio24.pl/_next/image?url=https%3A%2F%2Fstatic.prsa.pl%2Fimages%2F468332e5-ab1c-4e0d-9946-54269383bdca.file&w=1920&q=75'); /* Link do zdjęcia tła */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Tło poniżej treści */
+    filter: brightness(50%); /* Przyciemnione tło dla lepszej widoczności tekstu */
+    transition: transform 0.1s ease-out; /* Płynne przejście przy zmianie pozycji tła */
+  }
+  
+  .content-wrapper {
+    position: relative;
+    z-index: 1; /* Treść na wierzchu */
+  }
+  
+  .coach-home-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff; /* Biały kolor tekstu */
+    font-weight: 700;
+  }
+  
+  .coach-home-description {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .coach-home-description p {
+    margin-bottom: 20px;
+  }
+  
+  /* AOS custom animation */
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    .parallax-background {
+      background-attachment: scroll; /* Na mniejszych ekranach efekt parallax jest wyłączony */
+    }
+  }
+  
