@@ -5,13 +5,13 @@ const Header = ({ title, subtitle }) => {
   return (
     <div className="header-container">
       {/* Animacja dla tytułu */}
-      <h1 className="typing-effect">
+      <div className="typing-effect">
         {title.split("").map((char, i) => (
-          <span key={i} style={{ animationDelay: `${i * 0.04}s` }}>
+          <h2 key={i} style={{ animationDelay: `${i * 0.04}s` }}>
             {char === " " ? "\u00A0" : char}
-          </span>
+          </h2>
         ))}
-      </h1>
+      </div>
       
       {/* Animacja dla podtytułu */}
       {subtitle && (

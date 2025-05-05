@@ -4,16 +4,18 @@
     display: flex;
     justify-content: center;
     text-decoration: none;
+    
   }
   
   /* Bazowy styl */
   .cta-button-get {
     padding: 0.8rem 2rem;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
+
   }
   .cta-button-get:hover{
     text-decoration: none;
@@ -26,6 +28,8 @@
     background: linear-gradient(145deg, #fff2b2, #ffd700, #ffaa00);
     color: black;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: clamp(1rem, 5vw, 1.5rem);
+
 
   }
   .cta-button-get.gold:hover {

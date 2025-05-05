@@ -36,18 +36,14 @@ body.dark .header-container::after {
 
 
 .typing-effect {
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.4;
     max-width: 100%;
     margin: 0 auto;
-    font-family: 'Satoshi', sans-serif;
     word-break: break-word;
     overflow-wrap: break-word;
-    white-space: normal;
+    white-space: normal; 
 }
 
-.typing-effect span {
+.typing-effect h2 {
     opacity: 0;
     display: inline-block;
     animation: fadeInChar 0.1s ease forwards;

@@ -87,23 +87,23 @@ const Navbar = () => {
             </div>
 
             <NavLink to="/" end onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <span>Home</span>
+              <div className='h3-nav'>Home</div>
               <FaArrowRight className="arrow-icon" />
             </NavLink>
 
             <NavLink to="/about" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <span>About</span>
-              <FaArrowRight className="arrow-icon" />
+            <div className='h3-nav'>About</div>
+            <FaArrowRight className="arrow-icon" />
             </NavLink>
 
             <NavLink to="/contact" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <span>Contact</span>
-              <FaArrowRight className="arrow-icon" />
+            <div className='h3-nav'>Contact</div>
+            <FaArrowRight className="arrow-icon" />
             </NavLink>
 
             <NavLink to="/auth" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <span>Account</span>
-              <FaArrowRight className="arrow-icon" />
+            <div className='h3-nav'>Account</div>
+            <FaArrowRight className="arrow-icon" />
             </NavLink>
 
             <div className="nav-mobile-text-box">
