@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import HeroSection from '../../components/hero/HeroSection';
+import WhyUs from '../../components/whyUsSection/WhyUs';
 
 
 const Home = () => {
@@ -8,7 +9,8 @@ const Home = () => {
   return (
     <div className="home-container">
         <HeroSection />
-  </div>
+        <WhyUs />
+   </div>
   )
 };
 
