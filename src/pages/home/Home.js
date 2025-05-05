@@ -5,6 +5,7 @@ import CoachHome from '../../components/coachHome/CoachHome';
 import Features from '../../components/features/Features';
 import MainHero from '../../components/hero/MainHero';
 import Location from '../../components/location/Location';
+import TestimonialSlider from '../../components/slider/BlueSlider';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <div className="home-container">
         <MainHero/>
         <WhyUs />
+        <TestimonialSlider/>
         <Features/>
         <Location/>
         <HeroSection />

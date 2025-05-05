@@ -1,0 +1,56 @@
+.testimonial-slider {
+  background: #0e2a47;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.slider-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.card-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 24px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  scrollbar-width: none;
+}
+
+.card-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 280px;
+  background: #ffffff;
+  color: #0e2a47;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  scroll-snap-align: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 3px solid #0e2a47;
+}
+
+.stars {
+  margin: 10px 0;
+  color: gold;
+}
