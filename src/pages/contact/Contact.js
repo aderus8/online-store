@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './Contact.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import CTAButton from '../../components/button/Button';
-import Header from '../../components/header/Header';
+import Header from '../../components/header/HeaderTyping';
+import HeaderTyping from '../../components/header/HeaderTyping';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ const Contact = () => {
 
 
       <section >
-        <Header
+        <HeaderTyping
         title="Skontaktuj się z nami"
         subtitle="Masz pytania? Napisz do nas, chętnie Ci pomożemy!" />
  

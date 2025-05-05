@@ -1,7 +1,7 @@
 import React from 'react';
-import './Header.css';
+import './HeaderTyping.css';
 
-const Header = ({ title, subtitle }) => {
+const HeaderTyping = ({ title, subtitle }) => {
   return (
     <div className="header-container">
       {/* Animacja dla tytułu */}
@@ -27,4 +27,4 @@ const Header = ({ title, subtitle }) => {
   );
 };
 
-export default Header;
+export default HeaderTyping;

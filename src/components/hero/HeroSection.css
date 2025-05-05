@@ -30,20 +30,30 @@
     color: #fff;
     padding: 1rem 2rem;
   }
+  .hero-content p{
+    margin-top: 20px;
+  }
   
-  .cta-button {
-    margin-top: 2rem;
+  .hero-video-cta-button {
+    margin-top: 1.5rem;
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
-    background-color: #f0c000;
+    font-weight: bold;
+    background: linear-gradient(145deg, #fff2b2, #ffd700, #ffaa00);
     border: none;
     color: black;
     cursor: pointer;
     border-radius: 30px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* ← bardzo ważne */
   }
   
-  .cta-button:hover {
-    background-color: #d4a800;
+  .hero-video-cta-button:hover {
+    background: linear-gradient(145deg, #fdf1b8, #fad70e, #ffb012);
+    transform: translateX(10px) scale(1.1);
+    box-shadow: 0 1px 10px #d4aa0082;
+
   }
+  
+
   

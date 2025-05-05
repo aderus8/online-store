@@ -37,7 +37,7 @@ const HeroSection = () => {
             Let’s turn ambition into achievement — together.
           </p>
           <button
-            className="cta-button"
+            className="hero-video-cta-button"
             onClick={handleClick}
             data-aos="fade-up"
             data-aos-delay="400"

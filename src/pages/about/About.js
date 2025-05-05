@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Header from '../../components/header/Header';
+import Header from '../../components/header/HeaderTyping';
 import SectionHeader from '../../components/header/sectionHeader/SectionHeader';
 
 
