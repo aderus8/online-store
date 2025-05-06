@@ -1,0 +1,24 @@
+.brand-slider-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.brand-slider-title {
+  /* font-size: 28px; */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.brand-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%);
+}

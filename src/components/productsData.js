@@ -17,7 +17,7 @@ const productsDATA = {
             id: "2",
             name: "Adidas Ultraboost 22",
             price: 299.99,
-            image: "https://i1.t4s.cz/products/gx6639/adidas-ultraboost-22-463945-gx6642.jpeg",
+            image: "https://static.ftshp.digital/img/p/8/1/6/6/9/1/816691-full_product.jpg",
             type: "shoes",
             description: "Known for its comfort and incredible energy return.",
             company: "Adidas",

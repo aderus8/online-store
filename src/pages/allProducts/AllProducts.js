@@ -23,41 +23,41 @@ const AllProducts = () => {
       easing: 'ease-in-out',
       once: true,
     });
-  
+
     if (productsDATA && Array.isArray(productsDATA.products)) {
       setProducts(productsDATA.products);
     } else {
       console.error('productsDATA is not an array:', productsDATA);
     }
   }, []);
-  
+
 
   return (
     <div className='all-products-page-container'>
       <HeaderTyping title='All products'></HeaderTyping>
-     
+
       <div className='all-products-container'>
         {products.length > 0 ? (
-          products.map((product, index) => (            <div
+          products.map((product, index) => (<div
             key={product.id}
             className='product-card'
             data-aos='fade-up'
             data-aos-delay={index * 100}
-          >             
-           <div className='product-image-container'>
+          >
+            <div className='product-image-container'>
               <img src={product.image} alt={product.name} className="product-image" /></div>
-              <h3 className="product-name">{product.name}</h3>
-              <p className="product-price">{product.price} zł</p>
-              <p className="product-description">{product.description}</p>
-              <p className="product-company">Firma: {product.company}</p>
-              <div className='product-buttons'>
-
+            <h3 className="product-name">{product.name}</h3>
+            <div className='price-company'><p className="product-price">{product.price} zł</p>
+              {/* <p className="product-description">{product.description}</p> */}
+              <p className="product-company">{product.company}</p>
+            </div>
+            {/* <div className='product-buttons'>
               <button className="add-to-cart">Add to cart</button>
               <button className='view-details-button'>View details
                 {/* <div className="view-details-inside">Zobacz szczegóły</div> */}
-              </button>
-              </div>
-            </div>
+              {/* </button> */}
+            {/* // </div> */} 
+          </div>
 
           ))
         ) : (

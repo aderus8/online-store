@@ -6,6 +6,7 @@ import Location from '../../components/location/Location';
 import TestimonialSlider from '../../components/slider/TestimonialSlider';
 import Hero from '../../components/hero/HeroPhoto';
 import './Home.css'
+import BrandSlider from '../../components/slider/BrandSlider';
 
 const Home = () => {
 
@@ -21,6 +22,7 @@ const Home = () => {
           backgroundImage="https://cassette.sphdigital.com.sg/image/harpersbazaar/7cc413b3997418b621595bb1aecd9a427faf6e966610a153357a4d92812748ba"
           text="Clothes"/>
         </div>
+        <BrandSlider/>
         <WhyUs />
         <TestimonialSlider/>
         <Location/>
