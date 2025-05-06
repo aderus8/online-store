@@ -1,12 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 import HeroSection from '../../components/hero/HeroSection';
-import WhyUs from '../../components/whyUsSection/WhyUs';
+import WhyUs from '../../components/section/whyUsSection/WhyUs';
 import MainHero from '../../components/hero/MainHero';
 import Location from '../../components/location/Location';
 import TestimonialSlider from '../../components/slider/TestimonialSlider';
 import Hero from '../../components/hero/HeroPhoto';
 import './Home.css'
 import BrandSlider from '../../components/slider/BrandSlider';
+import sport from "../../assets/styles/sport.jpg";
+import casual from "../../assets/styles/casual.jpg";
+import elegant from "../../assets/styles/elegant.avif";
+import shoes from "../../assets/styles/shoes.jpg";
+import HeaderTyping from '../../components/header/HeaderTyping';
+import SectionHeader from '../../components/header/sectionHeader/SectionHeader';
+import FindSomethingForYou from '../../components/section/findSth/FindSth';
 
 const Home = () => {
 
@@ -23,7 +30,10 @@ const Home = () => {
           text="Clothes"/>
         </div>
         <BrandSlider/>
-        <WhyUs />
+        {/* <WhyUs /> */}
+
+        <FindSomethingForYou/>
+        
         <TestimonialSlider/>
         <Location/>
         <HeroSection />

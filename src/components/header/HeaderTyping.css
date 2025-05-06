@@ -17,7 +17,9 @@
     /* subtelny efekt świetlny */
     animation: drawLine 1.5s ease-out forwards;
     border-radius: 20px;
+
 }
+
 
 /* Tryb ciemny - metaliczny szary z ciemniejszym cieniem */
 body.dark .header-container::after {
@@ -65,6 +67,7 @@ body.dark .header-container::after {
     animation-delay: 2.5s;
     color: #444;
     font-family: 'Satoshi', sans-serif;
+    
 }
 
 
