@@ -4,3 +4,7 @@
 .home-container{
     margin: 0;
 }
+.heroes-container{
+ display: flex;
+ flex-direction: row;   
+}

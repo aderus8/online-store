@@ -23,7 +23,7 @@ const MainHero = () => {
         playsInline
       >
         <source 
-          src="https://videos.pexels.com/video-files/3192198/3192198-uhd_2560_1440_25fps.mp4"
+          src="https://videos.pexels.com/video-files/8306452/8306452-uhd_2732_1440_25fps.mp4"
           type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -31,18 +31,17 @@ const MainHero = () => {
       <div className="hero-overlay">
         <div className="hero-content">
           <h1 data-aos="fade-up">
-          Unlock your potential
+            Step into style
           </h1>
           <p data-aos="fade-up" data-aos-delay="200">
-          Football, physical, and mental training – complete support for your athletic growth.          </p>
+          Discover the latest fashion in footwear and apparel – designed to elevate your everyday.          </p>
           <button
             className="hero-video-cta-button"
             onClick={handleClick}
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            Get started
-          </button>
+Discover Our Collection          </button>
         </div>
       </div>
     </section>

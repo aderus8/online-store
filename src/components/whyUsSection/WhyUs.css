@@ -40,7 +40,7 @@
   }
   
   .icon-container {
-    background-color: #28a745;
+    background-color: goldenrod;
     padding: 20px;
     border-radius: 50%;
     display: inline-block;
@@ -51,7 +51,7 @@
   .whyus-card h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: #28a745;
+    color: goldenrod;
     font-weight: 600;
   }
   

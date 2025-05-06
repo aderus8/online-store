@@ -23,7 +23,7 @@ const HeroSection = () => {
         playsInline
       >
         <source 
-          src="https://videos.pexels.com/video-files/3192198/3192198-uhd_2560_1440_25fps.mp4"
+          src="https://videos.pexels.com/video-files/7100933/7100933-uhd_2560_1440_30fps.mp4"
           type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -31,11 +31,10 @@ const HeroSection = () => {
       <div className="hero-overlay">
         <div className="hero-content">
           <h1 data-aos="fade-up">
-            Ready to take your game to the next level?
+            Defined by Details
           </h1>
           <p data-aos="fade-up" data-aos-delay="200">
-            Let’s turn ambition into achievement — together.
-          </p>
+          Discover fashion that speaks for itself.          </p>
           <button
             className="hero-video-cta-button"
             onClick={handleClick}

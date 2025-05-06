@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaUsers, FaTrophy, FaChartLine, FaBrain } from 'react-icons/fa'; // Importujemy ikony z React Icons
+import { FaShoppingCart, FaTruck, FaGift, FaCreditCard } from 'react-icons/fa'; // Importujemy ikony z React Icons
 import './WhyUs.css';
 
 const WhyUs = () => {
@@ -11,30 +11,30 @@ const WhyUs = () => {
 
   const reasons = [
     {
-      icon: <FaUsers size={50} />,
-      title: 'Individual Approach',
-      description: 'Each player has unique needs and potential. We tailor training to your goals.',
+      icon: <FaShoppingCart size={50} />,
+      title: 'Wide Selection of Products',
+      description: 'We offer a variety of stylish clothing and shoes for all tastes and occasions.',
     },
     {
-      icon: <FaTrophy size={50} />,
-      title: 'Professional Coaching',
-      description: 'Experienced coaches with backgrounds in top academies and clubs.',
+      icon: <FaTruck size={50} />,
+      title: 'Fast and Reliable Delivery',
+      description: 'Get your orders delivered quickly and safely, no matter where you are.',
     },
     {
-      icon: <FaChartLine size={50} />,
-      title: 'Skill & Mental Development',
-      description: 'We focus on technique, game intelligence, and building mental strength.',
+      icon: <FaGift size={50} />,
+      title: 'Exclusive Offers & Discounts',
+      description: 'We offer great deals, discounts, and seasonal promotions to help you save more.',
     },
     {
-      icon: <FaBrain size={50} />,
-      title: 'Progress Tracking',
-      description: 'We track your progress and adjust the plan to ensure constant improvement.',
+      icon: <FaCreditCard size={50} />,
+      title: 'Secure Payment Options',
+      description: 'Shop with confidence using secure payment methods and easy checkout.',
     },
   ];
 
   return (
     <section className="whyus-section" id="whyus">
-      <h2 className="whyus-title" data-aos="fade-up">Why Train With Us?</h2>
+      <h2 className="whyus-title" data-aos="fade-up">Why Shop With Us?</h2>
       <div className="whyus-cards">
         {reasons.map((reason, index) => (
           <div className="whyus-card" key={index} data-aos="fade-up" data-aos-delay={index * 150}>

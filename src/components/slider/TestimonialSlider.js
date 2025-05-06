@@ -8,49 +8,50 @@ const testimonials = [
   {
     name: "Kacper",
     img: "https://randomuser.me/api/portraits/men/32.jpg",
-    text: "Training sessions are focused and professional. I improved quickly.",
+    text: "The shoes I bought are incredibly comfortable, and the delivery was super fast! I’ll definitely be shopping here again.",
   },
   {
     name: "Michał",
     img: "https://randomuser.me/api/portraits/men/76.jpg",
-    text: "Thanks to these sessions, I finally got selected to my dream team.",
+    text: "I found the perfect jacket for the season. The quality is top-notch and it fits perfectly. I love this store!",
   },
   {
     name: "Ola",
     img: "https://randomuser.me/api/portraits/women/65.jpg",
-    text: "Very supportive coaching. I gained both confidence and strength.",
+    text: "Great selection of sneakers! The colors and designs are exactly what I was looking for, and the size was spot on.",
   },
   {
     name: "Bartek",
     img: "https://randomuser.me/api/portraits/men/11.jpg",
-    text: "Professional environment, fun and challenging. Highly recommend!",
+    text: "Amazing customer service! They helped me choose the right size, and the clothes fit perfectly. Highly recommend.",
   },
   {
     name: "Julia",
     img: "https://randomuser.me/api/portraits/women/47.jpg",
-    text: "Mental training helped me stay calm during key matches.",
+    text: "I absolutely love my new outfit! The fabric is so comfortable, and the entire shopping experience was seamless.",
   },
   {
     name: "Michał",
     img: "https://randomuser.me/api/portraits/men/76.jpg",
-    text: "Thanks to these sessions, I finally got selected to my dream team.",
+    text: "Thanks to the fantastic recommendations, I found the perfect boots for winter. I'm so happy with my purchase!",
   },
   {
     name: "Ola",
     img: "https://randomuser.me/api/portraits/women/65.jpg",
-    text: "Very supportive coaching. I gained both confidence and strength.",
+    text: "The online shopping experience was so smooth. The shoes arrived on time, and I love how they feel. Will shop again soon!",
   },
   {
     name: "Bartek",
     img: "https://randomuser.me/api/portraits/men/11.jpg",
-    text: "Professional environment, fun and challenging. Highly recommend!",
+    text: "Great quality at affordable prices! The jacket I bought is stylish and warm, perfect for the winter months.",
   },
   {
     name: "Julia",
     img: "https://randomuser.me/api/portraits/women/47.jpg",
-    text: "Mental training helped me stay calm during key matches.",
+    text: "I was looking for trendy yet comfortable clothing, and I found just what I needed here. My new wardrobe is perfect!",
   },
 ];
+
 
 const TestimonialSlider = () => {
   useEffect(() => {
@@ -60,7 +61,7 @@ const TestimonialSlider = () => {
   return (
     <section className="testimonial-slider" id="testimonials">
       <div className="testimonial-slider-container">
-        <h2 data-aos="fade-up">What Athletes Say</h2>
+        <h2 data-aos="fade-up">What Clients Say</h2>
         <div className="testimonial-card-slider" data-aos="fade-up">
           {testimonials.map((t, i) => (
             <div className="testimonial-card" key={i} data-aos="zoom-in" data-aos-delay={i * 100}>
