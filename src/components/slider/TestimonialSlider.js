@@ -61,12 +61,12 @@ const TestimonialSlider = () => {
   return (
     <section className="testimonial-slider" id="testimonials">
       <div className="testimonial-slider-container">
-        <h2 data-aos="fade-up">What Clients Say</h2>
+        <h3 data-aos="fade-up">What Clients Say</h3>
         <div className="testimonial-card-slider" data-aos="fade-up">
           {testimonials.map((t, i) => (
             <div className="testimonial-card" key={i} data-aos="zoom-in" data-aos-delay={i * 100}>
               <img src={t.img} alt={t.name} className="testimonial-avatar" />
-              <h3>{t.name}</h3>
+              <h6>{t.name}</h6>
               <div className="stars">
                 {[...Array(5)].map((_, i) => (
                   <FaStar key={i} color="gold" />
