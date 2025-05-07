@@ -1,11 +1,15 @@
 .find-your-style-section{
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    padding-top: 1px;
+    background: linear-gradient(135deg, #f1f4f7, #ebeffc);
 }
 .style-options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-bottom: 30px;
+    margin-top: 40px;
+    color: #242424;
   }
   
   .style-option {
@@ -67,6 +71,31 @@
   .style-explore-more {
     text-align: center;
     margin-top: 40px;
+  }
+
+  .style-explore-more h3{
+    background: linear-gradient(to right, #636363, #575757, #242424); /* mocniejszy kontrast */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+
+  }
+
+  .style-explore-more p {
+    font-family: 'Satoshi', sans-serif;
+    margin-top: 1rem;
+    padding: 0 2rem;
+    /* font-size: 1.2rem; */
+    font-weight: 300;
+    color: #bbb;
+    letter-spacing: 1px;
+    animation: fadeIn 1.2s ease forwards;
+    color: #4a4a4a;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
   
   .explore-all-btn {

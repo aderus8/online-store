@@ -9,13 +9,21 @@
   
   /* Bazowy styl */
   .cta-button-get {
-    padding: 0.8rem 2rem;
     font-weight: 600;
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
-
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    /* background: linear-gradient(145deg, #fff2b2, #ffd700, #ffaa00); */
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+   
   }
   .cta-button-get:hover{
     text-decoration: none;
@@ -25,7 +33,7 @@
   /* Warianty kolorystyczne */
   
   .cta-button-get.gold {
-    background: linear-gradient(145deg, #fff2b2, #ffd700, #ffaa00);
+    background: linear-gradient(145deg, #fff7cf, #ffe657, #ffc248);
     color: black;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: clamp(1rem, 5vw, 1.5rem);

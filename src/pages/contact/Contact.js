@@ -26,10 +26,10 @@ const Contact = () => {
 
 
       <section >
-        <HeaderTyping
-        title="Skontaktuj się z nami"
-        subtitle="Masz pytania? Napisz do nas, chętnie Ci pomożemy!" />
- 
+      <HeaderTyping
+        title="Contact Us"
+        subtitle="Have questions? Write to us — we’re happy to help!" />
+
       </section>
 
 
@@ -39,7 +39,7 @@ const Contact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Imię i nazwisko"
+            placeholder="Name"
             value={formData.name}
             onChange={handleChange}
             required
@@ -54,7 +54,7 @@ const Contact = () => {
           />
           <textarea
             name="message"
-            placeholder="Wiadomość"
+            placeholder="Message"
             value={formData.message}
             onChange={handleChange}
             required

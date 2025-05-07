@@ -5,10 +5,10 @@ const Location = () => {
   return (
     <section className="location-section" data-aos="fade-up">
       <div className="location-wrapper">
-        <h2 className="location-title">📍 Where We Are?</h2>
+        <h3 className="location-title">📍 Where We Are?</h3>
         <div className="location-content">
           <div className="location-text">
-            <h3>Our Store – Gdańsk, Wrzeszcz</h3>
+            <h5>Our Store – Gdańsk, Wrzeszcz</h5>
             <p>
               You can find our store at the modern shopping center located at{" "}
               <strong>Kościuszki 10, Gdańsk</strong>. We are open all year round, offering a wide selection of fashion and footwear.

@@ -1,0 +1,37 @@
+.about-hero-section {
+    height: 70vh;
+    /* background-image: url("https://techcloudltd.com/blog/wp-content/uploads/2023/08/Proper-studio-lighting-setup-Tech-Cloud-Ltd.webp"); */
+    background-size: cover; /* Zamiast contain */
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* tekst bliżej dołu */
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 4rem; /* margines dla tekstu */
+  }
+  
+  .about-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 4rem 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0,0,0,0));
+    color: #fff;
+    text-align: center;
+  }
+  
+  
+  .about-hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .about-hero-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  

@@ -1,6 +1,6 @@
 .testimonial-slider {
-  background: #0e2a47;
-  color: #fff;
+  /* background: #0e2a47; */
+  background: linear-gradient(145deg, #0e2a47,#3a7bd5);
   padding: 60px 20px;
   text-align: center;
 }
@@ -8,6 +8,9 @@
 .testimonial-slider-container {
   max-width: 100%;
   margin: 0 auto;
+}
+.testimonial-slider-container h3{
+  color: white;
 }
 .testimonial-card-slider {
   display: flex;

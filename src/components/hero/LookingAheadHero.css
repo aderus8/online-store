@@ -1,0 +1,58 @@
+.looking-ahead-hero-section {
+    height: 50vh;
+    /* background-image: url("your-image-path.webp"); */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  
+  .looking-ahead-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 4rem 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0,0,0,0));
+    color: #fff;
+    text-align: center;
+  }
+  
+  .looking-ahead-hero-overlay h2 {
+    /* font-size: 3rem; */
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .looking-ahead-hero-overlay p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .looking-ahead-hero-overlay button {
+    margin-top: 0.1rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .looking-ahead-hero-overlay button:hover {
+    transform: translateY(-3px);
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    color: #111;
+  }
+  
+  

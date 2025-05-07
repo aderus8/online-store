@@ -2,15 +2,17 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './HeroSection.css';
+import { useNavigate } from 'react-router-dom';
 
 const MainHero = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
 
   const handleClick = () => {
-    console.log("CTA clicked!");
-    // możesz tu np. scrollować do sekcji lub nawigować
+    navigate("/all-products")    
   };
 
   return (
@@ -22,7 +24,7 @@ const MainHero = () => {
         loop
         playsInline
       >
-        <source 
+        <source
           src="https://videos.pexels.com/video-files/8306452/8306452-uhd_2732_1440_25fps.mp4"
           type="video/mp4" />
         Your browser does not support the video tag.
@@ -34,14 +36,15 @@ const MainHero = () => {
             Step into style
           </h1>
           <p data-aos="fade-up" data-aos-delay="200">
-          Discover the latest fashion in footwear and apparel – designed to elevate your everyday.          </p>
+            Discover the latest fashion in footwear and apparel – designed to elevate your everyday.          </p>
           <button
             className="hero-video-cta-button"
             onClick={handleClick}
             data-aos="fade-up"
             data-aos-delay="400"
           >
-Discover Our Collection          </button>
+            Discover Our Collection          
+          </button>
         </div>
       </div>
     </section>

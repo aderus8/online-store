@@ -88,18 +88,18 @@ export default function AuthForm() {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Hasło"
+          placeholder="Password"
           required
         />
         <button type="submit" className="auth-button">
-          {isLogin ? "Zaloguj" : "Zarejestruj"}
+          {isLogin ? "Log In" : "Register"}
         </button>
 
         {error && <p className="error-message">{error}</p>}
         {successMessage && <p className="success-message">{successMessage}</p>}
 
         <div className="auth-switch" onClick={handleToggle}>
-          {isLogin ? 'Don’t have an account? Sign up' : 'Already have an account? Login'}
+          {isLogin ? "Don't have an account? Sign up" : "Already have an account? Log in"}
         </div>
       </form>
 
@@ -109,16 +109,17 @@ export default function AuthForm() {
             src="https://static.vecteezy.com/system/resources/previews/022/613/027/non_2x/google-icon-logo-symbol-free-png.png"
             alt="Google"
           />
-          {isLogin ? 'Login with Google' : 'Sign Up with Google'}
+          {isLogin ? 'Log in with Google' : 'Sign up with Google'}
         </div>
         <div className="social-button">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
             alt="Microsoft"
           />
-          {isLogin ? 'Login with Microsoft' : 'Sign Up with Microsoft'}
+          {isLogin ? 'Log in with Microsoft' : 'Sign up with Microsoft'}
         </div>
       </div>
+
     </div>
   );
 }

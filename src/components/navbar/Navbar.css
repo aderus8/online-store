@@ -21,8 +21,8 @@
 }
 
 body.light .navbar.scrolled {
-    background: linear-gradient(135deg, #f1f4f7, #ebeffc);
-    background-blend-mode: screen;
+    background: linear-gradient(135deg, #fffdfa, #fdf3f0);
+        background-blend-mode: screen;
 }
 
 body.dark .navbar.scrolled {
@@ -248,7 +248,7 @@ body.dark .navbar.scrolled {
     }
 
     body.light .mobile-nav-links {
-        background: linear-gradient(135deg, #f1f4f7, #ebeffc);
+        background: linear-gradient(135deg, #fffdfa, #fdf3f0);
     }
 
     body.dark .mobile-nav-links {

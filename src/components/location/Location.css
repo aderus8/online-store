@@ -14,8 +14,6 @@
 }
 
 .location-title {
-  font-size: 2.5rem;
-  font-weight: 700;
   text-align: center;
   color: #1f2937;
   margin-bottom: 40px;
@@ -30,13 +28,13 @@
 
 .location-text {
   flex: 1 1 300px;
-  font-size: 1.1rem;
+  /* font-size: 1.1rem; */
   color: #374151;
   line-height: 1.8;
 }
 
-.location-text h3 {
-  font-size: 1.5rem;
+.location-text h5 {
+  /* font-size: 1.5rem; */
   color: #1d4ed8;
   margin-bottom: 12px;
 }

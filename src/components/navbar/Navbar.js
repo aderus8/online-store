@@ -128,6 +128,15 @@ const Navbar = () => {
               <FaArrowRight className="arrow-icon" />
             </NavLink>
 
+            <NavLink to="/user-products" onClick={() => setIsMenuOpen(false)} className="mobile-link">
+              <div className='h3-nav'>User products</div>
+              <FaArrowRight className="arrow-icon" />
+            </NavLink>
+
+            <NavLink to="/all-products" onClick={() => setIsMenuOpen(false)} className="mobile-link">
+              <div className='h3-nav'>All products</div>
+              <FaArrowRight className="arrow-icon" />
+            </NavLink>
 
             <NavLink to="/contact" onClick={() => setIsMenuOpen(false)} className="mobile-link">
               <div className='h3-nav'>Contact</div>
