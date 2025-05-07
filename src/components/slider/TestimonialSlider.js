@@ -61,7 +61,7 @@ const TestimonialSlider = () => {
   return (
     <section className="testimonial-slider" id="testimonials">
       <div className="testimonial-slider-container">
-        <h3 data-aos="fade-up">What Clients Say</h3>
+        <h3 data-aos="fade-up">What Clients Say?</h3>
         <div className="testimonial-card-slider" data-aos="fade-up">
           {testimonials.map((t, i) => (
             <div className="testimonial-card" key={i} data-aos="zoom-in" data-aos-delay={i * 100}>

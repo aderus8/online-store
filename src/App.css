@@ -22,7 +22,17 @@ body.dark {
   background-position: center;
 }
 
-
+.accent-box {
+  background-color: #ffbfa0;
+  border-radius: 12px;
+  padding: 20px;
+  color: #4a2f28;
+}
+.subtle-highlight {
+  background-color: #f5e9e2;
+  border-left: 4px solid #d1bdb3;
+  padding: 10px 15px;
+}
 
 /* Nagłówki */
 h1, h2, h3, h4, h5, h6 {
@@ -60,6 +70,8 @@ p {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   /* line-height: 1.6; */
   margin-bottom: 1.5rem;
+  font-family: 'Satoshi', sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Span i Small */

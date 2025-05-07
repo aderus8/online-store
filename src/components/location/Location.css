@@ -16,7 +16,7 @@
 .location-title {
   text-align: center;
   color: #1f2937;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .location-content {
@@ -28,15 +28,21 @@
 
 .location-text {
   flex: 1 1 300px;
+  text-align: center;
+  color: #4a4a4a;
+
   /* font-size: 1.1rem; */
-  color: #374151;
-  line-height: 1.6;
+  /* color: #374151; */
+  /* line-height: 1.6; */
 }
 
 .location-text h6 {
+  margin-top: 20px;
   /* font-size: 1.5rem; */
-  color: #2049ba;
-  margin-bottom: 12px;
+  /* color: #2049ba; */
+  margin-bottom: 40px;
+  color: #374151;
+
 }
 
 .location-text strong {
@@ -44,12 +50,11 @@
 }
 
 .location-map {
-  flex: 1 1 400px;
+  flex: 1 1 500px;
   height: 300px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  /* padding: 10px; */  /* ← USUŃ to */
 }
 
 .location-map iframe {
