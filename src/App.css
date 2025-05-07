@@ -5,7 +5,8 @@ body {
 body.light {
   background-color: #fff;
   color: #000;
-  background: linear-gradient(135deg, #fffdfa, #fdf3f0),    url("https://i.pinimg.com/736x/8e/7e/27/8e7e2723ae6b6839ebbbc29b0c31ce37.jpg");
+  background: linear-gradient(135deg, #fffdfa, #fdf3f0),    
+  url("https://i.pinimg.com/736x/8e/7e/27/8e7e2723ae6b6839ebbbc29b0c31ce37.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -20,6 +21,7 @@ body.dark {
   background-attachment: fixed;
   background-position: center;
 }
+
 
 
 /* Nagłówki */

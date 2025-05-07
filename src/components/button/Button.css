@@ -33,7 +33,7 @@
   /* Warianty kolorystyczne */
   
   .cta-button-get.gold {
-    background: linear-gradient(145deg, #fff7cf, #ffe657, #ffc248);
+    background: linear-gradient(145deg, #ffe5b4, #ffcba4, #ffb07c);
     color: black;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: clamp(1rem, 5vw, 1.5rem);
@@ -41,7 +41,7 @@
 
   }
   .cta-button-get.gold:hover {
-    background-color: #d4a900;
+    background-color: #ffb07c;
     transform: translateX(5px);
     transform: scale(1.05);
     text-decoration: none;
@@ -55,6 +55,17 @@
   }
   .cta-button-get.grey:hover {
     background: #999;
+    transform: scale(1.05) translateX(5px);
+    text-decoration: none;
+
+  }
+  .cta-button-get.darkblue {
+    background: linear-gradient(145deg, #3b4252,#4a536b);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .cta-button-get.darkblue:hover {
+    background: linear-gradient(145deg, #2b313d,#3b4359);
     transform: scale(1.05) translateX(5px);
     text-decoration: none;
 

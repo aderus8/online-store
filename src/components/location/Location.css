@@ -30,12 +30,12 @@
   flex: 1 1 300px;
   /* font-size: 1.1rem; */
   color: #374151;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
-.location-text h5 {
+.location-text h6 {
   /* font-size: 1.5rem; */
-  color: #1d4ed8;
+  color: #2049ba;
   margin-bottom: 12px;
 }
 

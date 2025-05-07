@@ -1,6 +1,14 @@
 .testimonial-slider {
   /* background: #0e2a47; */
-  background: linear-gradient(145deg, #0e2a47,#3a7bd5);
+  /* background-color: #f5e9e2; */
+
+  /* background: linear-gradient(145deg, #472b1a, #cea993, #f5d9c9); */
+  /* background: linear-gradient(135deg, #4e2e1e, #3a2418, #2c1a12); */
+
+  background: linear-gradient(135deg, #ffe6d6aa, #f9cbb35a, #f4a88e6b);
+  /* background: linear-gradient(145deg, #0e2a47,#3a7bd5); */
+  /* background: linear-gradient(145deg, #3b4252,#4a536b); */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.76); */
   padding: 60px 20px;
   text-align: center;
 }
@@ -10,7 +18,7 @@
   margin: 0 auto;
 }
 .testimonial-slider-container h3{
-  color: white;
+  color: black;
 }
 .testimonial-card-slider {
   display: flex;

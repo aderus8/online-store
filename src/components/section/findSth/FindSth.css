@@ -1,8 +1,8 @@
 .find-your-style-section{
-    padding-bottom: 50px;
     padding-top: 1px;
     background: linear-gradient(135deg, #fffdfa, #fdf3f0);
-}
+    padding: 1rem 3rem;
+  }
 .style-options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -71,6 +71,7 @@
   .style-explore-more {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .style-explore-more h3{
@@ -113,9 +114,22 @@
     .style-options {
       grid-template-columns: repeat(2, 1fr);
     }
+    .find-your-style-section{
+      padding: 1rem 2rem;
   }
-  
+}
+  @media (max-width: 768px){
+    .find-your-style-section{
+      padding: 1rem 1rem;
+  }
+  .image-container img {
+    height: 350px;
+  } 
+}
   @media (max-width: 600px) {
+    .find-your-style-section{
+      padding: 1rem 0rem;
+  }
     .style-options {
         grid-template-columns: repeat(2, 1fr);
     }

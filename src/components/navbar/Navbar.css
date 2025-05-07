@@ -75,7 +75,7 @@ body.dark .navbar.scrolled {
 }
 
 .nav-icon:hover {
-    color: #f0c000;
+    color: #ffb07c;
 }
 
 /* SWITCH ZMIANA MOTYWU */
@@ -86,8 +86,8 @@ body.dark .navbar.scrolled {
 }
 
 .theme-toggle {
-    background-color: #f9d959;
-    border: 2px solid #f0c000;
+    background: linear-gradient(145deg, #ffe5b4, #ffcba4, #ffb07c);
+    border: 2px solid #ffb07c;
     padding: 6px;
     border-radius: 20px;
     cursor: pointer;
@@ -130,7 +130,7 @@ body.dark .navbar.scrolled {
 
 .theme-toggle:focus {
     outline: none;
-    box-shadow: 0 0 10px rgba(240, 192, 0, 0.5);
+    box-shadow: 0 0 10px rgba(225, 132, 79, 0.3);
 }
 
 /* NAVBAR MOBILE  */
@@ -223,7 +223,7 @@ body.dark .navbar.scrolled {
     }
 
     .mobile-nav-links a:hover svg {
-        color: #f0c000;
+        color: #ffb07c;
     }
 
     /* Przycisk zamknięcia menu */

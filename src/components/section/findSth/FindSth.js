@@ -17,15 +17,9 @@ const categories = [
 const FindSomethingForYou = () => {
     return (
         <div className="find-your-style-section">
-            {/* <SectionHeader
-                title="Find Something for You!"
-                subtitle="We offer a wide selection of products to match your style and needs. Whether you’re looking for athletic wear, elegant fashion, or casual pieces, you’ll find something perfect here. Choose a category and discover our top picks!"
-            /> */}
             <div className="style-explore-more">
                 <h3>Find Something for You!</h3>
                 <p>We offer a wide selection of products to match your style and needs. Whether you’re looking for athletic wear, elegant fashion, or casual pieces, you’ll find something perfect here. Choose a category and discover our top picks!</p>
-                {/* <button className="explore-all-btn">Explore All Products</button> */}
-                {/* <CTAButton variant='gold'>Explore All Products</CTAButton> */}
             </div>
             
             <div className="style-options">
@@ -47,7 +41,7 @@ const FindSomethingForYou = () => {
                 <p>Explore all categories and discover our best-selling products in one place.</p>
                 {/* <button className="explore-all-btn">Explore All Products</button> */}
                 {/* <CTAButton variant='gold'>Explore All Products</CTAButton> */}
-                <CTAButton to='/all-products' variant='red'>Explore All Products</CTAButton>
+                <CTAButton to='/all-products' variant='darkblue'>Explore All Products</CTAButton>
             </div>
         </div>
     );

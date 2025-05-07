@@ -28,6 +28,7 @@ const brands = [
 
 const BrandSlider = () => {
   return (
+    <div className="slider-container">
     <div className="brand-slider-wrapper">
       {/* <h2 className="brand-slider-title">Our brands</h2> */}
       <Swiper
@@ -40,7 +41,7 @@ const BrandSlider = () => {
         className="brand-swiper"
       >
         {brands.map((brand, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="brand-swiper-slide">
             <img
               src={brand.logo}
               alt={brand.name}
@@ -50,6 +51,7 @@ const BrandSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+    </div>
     </div>
   );
 };
