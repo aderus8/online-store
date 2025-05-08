@@ -2,44 +2,53 @@
 
 const productsDATA = {
     products: [
+      
+      
         {
-            id: "1",
-            name: "Nike Air Max 2021",
-            price: 449.99,
-            image: "https://images.nike.com/is/image/DotCom/CT1280_100_A_PREM?$nikeImg$",
-            type: "shoes",
-            description: "A new release with superior cushioning and support for all your runs.",
-            company: "Nike",
-            color: "Black/White",
-            size: "Various Sizes",
-          },
-          {
-            id: "2",
-            name: "Adidas Ultraboost 22",
-            price: 299.99,
-            image: "https://static.ftshp.digital/img/p/8/1/6/6/9/1/816691-full_product.jpg",
-            type: "shoes",
-            description: "Known for its comfort and incredible energy return.",
-            company: "Adidas",
-            color: "Black/Orange",
-            size: "Various Sizes",
-          },
-          {
-            id: "3",
-            name: "Puma Running Shoes",
-            price: 120.00,
-            image: "https://sklep.sizeer.com/api/images/offer-1012178320/seo/gallery/thumbnails/images/16/1602578/mdfd84992966cbe0d8186acae830c28e9_446058_z_1.jpg",
-            type: "shoes",
-            description: "Perfect for high-performance athletes, combining support and style.",
-            company: "Puma",
-            color: "Blue/White",
-            size: "Various Sizes",
-          },
+          id: 1,
+          name: "Polo Ralph Lauren Island Fleece Long Sleeve Sweatshirt",
+          price: 759.00,
+          image: "https://img01.ztat.net/article/spp-media-p1/85da2d9b58694fda8ef2b3e330312400/d5886ef6e31346eb89e98657cb47ba5e.jpg?imwidth=1800",
+          type: "hoodie",
+          description: "Stylowa bluza z kapturem w kolorze Alpine Blue, wykonana z miękkiej bawełny.",
+          company: "Polo Ralph Lauren",
+          color: "Alpine Blue",
+          size: "Various Sizes",
+          url: "https://www.zalando.pl/polo-ralph-lauren-island-fleece-long-sleeve-sweatshirt-bluza-z-kapturem-alpine-blue-po221j09u-k13.html"
+        },
+        {
+          id: 2,
+          name: "Tommy Hilfiger Hoodie Unisex",
+          price: 280.00,
+          image: "https://img01.ztat.net/article/spp-media-p1/4c86bdae52dd41db92bef770588e8a68/5ff0cc44163a41b394cc3d509290110b.jpg?imwidth=18000",
+          type: "hoodie",
+          description: "Klasyczna biała bluza z kapturem i kieszenią typu kangur.",
+          company: "Tommy Hilfiger",
+          color: "White",
+          size: "Various Sizes",
+          url: "https://www.zalando.pl/tommy-hilfiger-hoodie-unisex-bluza-white-to1210049-a11.html"
+        },
+        {
+          id: 3,
+          name: "Jordan Bluza Rozpinana",
+          price: 305.00,
+          image: "https://img01.ztat.net/article/spp-media-p1/6e3a18c7656948d1970686a834b6719b/b645663ddd854e888ed81d6e09a817f8.jpg?imwidth=1800",
+          type: "zip-up hoodie",
+          description: "Czarna bluza rozpinana z białymi detalami, idealna na co dzień.",
+          company: "Jordan",
+          color: "Black/White",
+          size: "Various Sizes",
+          url: "https://www.zalando.pl/jordan-bluza-rozpinana-blackwhite-joc21j022-q11.html"
+        }
+      
+      
+      
+      ,
           {
             id: "4",
             name: "Levi's Denim Jacket",
             price: 89.99,
-            image: "https://img01.ztat.net/article/spp-media-p1/aa4e547f490d4bbc828293d43bf15112/0660f1c331bc4d7988741843c7f484d1.jpg?imwidth=762&filter=packshot",
+            image: "https://img.modivo.cloud/product(7/b/4/0/7b40a29a2b29836483e065ba94d0c7ce9d8a878e_1_5400898170208.jpg,webp)/levis-r-kurtka-jeansowa-original-trucker-29945-0100-niebieski-regular-fit.webp",
             type: "clothing",
             description: "A classic Levi’s jacket for everyday wear.",
             company: "Levi's",
@@ -61,7 +70,7 @@ const productsDATA = {
             id: "6",
             name: "Nike Tech Fleece Hoodie",
             price: 119.99,
-            image: "https://img01.ztat.net/article/spp-media-p1/aa4e547f490d4bbc828293d43bf15112/0660f1c331bc4d7988741843c7f484d1.jpg?imwidth=762&filter=packshot",
+            image: "https://thumblr.uniid.it/product/338796/cf839c52b56e.jpg?width=1080&format=webp&q=75",
             type: "clothing",
             description: "Premium tech fleece hoodie with excellent warmth and style.",
             company: "Nike",
@@ -72,7 +81,7 @@ const productsDATA = {
             id: "7",
             name: "Vans Old Skool Sneakers",
             price: 69.99,
-            image: "https://sklep.sizeer.com/api/images/offer-1012178320/seo/gallery/thumbnails/images/16/1602578/mdfd84992966cbe0d8186acae830c28e9_446058_z_1.jpg",
+            image: "https://source.unsplash.com/random/?clothing",
             type: "shoes",
             description: "Classic sneakers that have stood the test of time.",
             company: "Vans",

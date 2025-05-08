@@ -1,236 +1,313 @@
-/* Ogólny kontener */
+/* Kontener strony z produktami */
 .all-products-page-container {
-    margin-top: 80px;
-    padding: 20px; /* Padding na stronie */
+    display: flex; /* Ustawienie elastycznego układu (flexbox) */
+    flex-direction: row; /* Elementy będą rozmieszczone w rzędzie (poziomo) */
+    width: 100%; /* Szerokość kontenera na 100% dostępnej przestrzeni */
+    margin-top: 80px; /* Odstęp od góry strony */
+    padding: 0; /* Brak dodatkowego paddingu */
 }
-
-/* Kontener dla wszystkich produktów */
-.all-products-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px;
-}
-
-/* Karta produktu */
-.product-card {
-    flex: 1 1 calc(33.333% - 40px); /* max 3 w rzędzie */
-    max-width: 320px;
-    height: 500px;
-    border: 1px solid white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-}
-
-/* Wersja na ciemne tło */
-body.dark .product-card {
-    background-color: #333;
-    border: 1px solid #444;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-}
-
-body.dark .product-name, 
-body.dark .product-price, 
-body.dark .product-description, 
-body.dark .product-company {
-    color: white; /* Zmiana koloru tekstu w trybie ciemnym */
-}
-
-/* Efekt powiększenia karty po najechaniu */
-.product-card:hover .product-image {
-    transform: scale(1.05);
-}
-
-.product-card:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-.product-image-container {
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
-}
-
-/* Obrazek produktu */
-.product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Nazwa produktu */
-.product-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #333;
-}
-.price-company{
+.filter-button-section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-/* Cena produktu */
+.filter-button-section button{
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;}
+    .filter-button-section button:hover{
+        background-color: #eaeaea;
+    }
+
+        .filter-button-section button{
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+/* Główna część strony */
+.rest-of-page {
+    width: 80%; /* Główna część strony zajmuje 80% szerokości */
+    padding: 30px; /* Padding wewnętrzny 20px */
+}
+
+/* Kontener kart produktów - układ siatki */
+.all-products-container {
+    display: grid; /* Użycie CSS Grid do tworzenia siatki */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Kolumny o minimalnej szerokości 250px, z automatycznym wypełnieniem dostępnej przestrzeni */
+    gap: 30px; /* Odstęp między kartami produktów */
+    padding: 30px; /* Padding wewnętrzny */
+    width: 100%; /* Szerokość na 100% */
+    box-sizing: border-box; /* Wlicza padding i border do rozmiaru elementu */
+}
+
+@media (min-width: 1500px) {
+    .all-products-container {
+        grid-template-columns: repeat(3, 1fr); /* Maksymalnie 3 kolumny na szerokich ekranach */
+    }
+}
+/* Karta produktu */
+.product-card {
+    border: 1px solid #eaeaea; /* Obwódka karty produktu */
+    border-radius: 10px; /* Zaokrąglone rogi karty */
+    overflow: hidden; /* Ukrycie elementów wychodzących poza obszar karty */
+    transition: box-shadow 0.3s ease-in-out; /* Płynna zmiana cienia przy najechaniu */
+    display: flex; /* Flexbox w celu lepszego rozmieszczenia elementów w karcie */
+    flex-direction: column; /* Układ elementów w kolumnie (od góry do dołu) */
+    background-color: white; /* Białe tło */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Lekki cień */
+    cursor: pointer; /* Kursor zmienia się na wskaźnik (ręka) */
+}
+
+/* Ciemny tryb */
+body.dark .product-card {
+    background-color: #333; /* Tło karty w trybie ciemnym */
+    border: 1px solid #444; /* Ciemniejsza obwódka */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Jaśniejszy cień w trybie ciemnym */
+}
+
+body.dark .product-name,
+body.dark .product-price,
+body.dark .product-description,
+body.dark .product-company {
+    color: white; /* Kolor tekstu na biały w trybie ciemnym */
+}
+
+/* Hover efekt na karcie produktu */
+.product-card:hover .product-image {
+    transform: scale(1.05); /* Powiększenie obrazu przy najechaniu */
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Powiększenie cienia przy najechaniu */
+}
+
+/* Obrazek produktu */
+.product-image-container {
+    width: 100%; /* Szerokość na 100% */
+    aspect-ratio: 1 / 1; /* Utrzymanie proporcji 1:1 (kwadratowy obrazek) */
+    overflow: hidden; /* Ukrycie części obrazka wychodzącej poza obszar */
+}
+
+.product-image {
+    width: 100%; /* Szerokość obrazka na 100% */
+    height: 100%; /* Wysokość obrazka na 100% */
+    object-fit: cover; /* Obrazek będzie skalowany, aby wypełnił kontener, zachowując proporcje */
+    transition: transform 0.5s ease-in-out; /* Płynne powiększenie obrazka */
+}
+
+/* Nazwa produktu */
+.product-name {
+    font-size: 18px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie tekstu */
+    margin: 10px 0; /* Odstęp górny i dolny */
+    color: #333; /* Kolor tekstu */
+}
+
+/* Cena + firma - ułożenie obok siebie */
+.price-company {
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Układ w rzędzie */
+    justify-content: space-between; /* Rozmieszczenie z przestrzenią między elementami */
+    align-items: center; /* Wyrównanie do środka w pionie */
+}
+
+/* Cena */
 .product-price {
-    font-size: 16px;
-    font-weight: 600;
-    color: #e67e22;
-    margin-right: 20px;
+    font-size: 16px; /* Rozmiar czcionki */
+    font-weight: 600; /* Pogrubienie tekstu */
+    color: #e67e22; /* Pomarańczowy kolor tekstu */
+    margin-right: 20px; /* Odstęp z prawej strony */
 }
 
 /* Opis produktu */
 .product-description {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 15px;
-    margin-left: 5px;
+    font-size: 14px; /* Rozmiar czcionki */
+    color: #555; /* Szary kolor tekstu */
+    margin-bottom: 15px; /* Odstęp na dole */
+    margin-left: 5px; /* Odstęp z lewej strony */
 }
 
-/* Firma produktu */
+/* Firma */
 .product-company {
-    font-size: 14px;
-    color: #7f8c8d;
-    /* margin-bottom: 10px; */
+    font-size: 14px; /* Rozmiar czcionki */
+    color: #7f8c8d; /* Szary kolor tekstu */
 }
 
-.product-buttons{
-    margin-top: auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    /* padding-bottom: 10px; */
-}
-/* Przycisk 'Dodaj do koszyka' */
-.add-to-cart {
-    background: linear-gradient(145deg, #fffbea, #fff0b3, #ffd700);    
-    color: black;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    width: 45%;  /* Zmniejszenie szerokości przycisku */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-bottom: 10px;  /* Odstęp między przyciskami */
-    height: 50px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.20);
-
-
-}
-.view-details-button {
-    background: linear-gradient(145deg, #ffffff, #e0e0e0);    color: black;
-    border: none;
-    padding: 10px;
-    font-size: 14px;
-    width: 45%;  /* Zmniejszenie szerokości przycisku */
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-bottom: 10px;  /* Odstęp między przyciskami */
-    height: 50px;
-    font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.20);
-
-}
-.view-details-button:hover {
-    transform: translateY(-4px);
-    background: linear-gradient(145deg, #f9f9f9, #dcdcdc);
-
-
-}
-
-/* Efekt hover na przycisku (zmiana koloru przycisku) */
-.add-to-cart:hover {
-    transform: translateY(-4px);
-    background: linear-gradient(145deg, #fff9d6, #ffe066, #ffc300);    
+/* Kontener przycisków w karcie produktu */
+.product-buttons {
+    margin-top: auto; /* Przesunięcie przycisków na dół karty */
+    width: 100%; /* Szerokość na 100% */
+    display: flex; /* Flexbox */
+    justify-content: space-around; /* Rozmieszczenie przycisków z równą przestrzenią między nimi */
 }
 
 
-@media (max-width: 1024px) {
-    .product-card {
-      flex: 1 1 calc(50% - 40px); /* 2 w rzędzie */
-    }
-  }
-
-  @media (max-width: 600px) {
-    .product-card {
-      flex: 1 1 100%; /* 1 w rzędzie */
-    }
-    .product-buttons {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-      }
-    
-      .add-to-cart, .view-details-button {
-        width: 90%;
-      }
-  }
-
-/* Responsywność */
-@media (max-width: 768px) {
-    /* Dwa produkty obok siebie */
+@media(max-width: 1100px){
     .all-products-container {
-        gap: 0;
-        justify-content: space-between;
-        padding: 0;
+        grid-template-columns: repeat(2, 1fr); /* Co najmniej 2 kolumny na szerokich ekranach */
+    }
+}
+@media (max-width: 768px) {
+    .products-sidebar {
+        width: 0; /* Zmieniamy szerokość na 0, żeby nie rezerwować miejsca */
+        visibility: hidden; /* Ukrywamy element */
+        display: none; /* Całkowicie usuwamy element z układu */
+        position: absolute; /* Usuwamy z układu */
     }
 
+    .all-products-container {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Kolumny o minimalnej szerokości 200px */
+        gap: 15px; /* Odstęp między kartami produktów */
+        width: 100%; /* Szerokość na 100% */
+        padding: 10px;
+    }
+
+    /* Główna część strony */
+    .rest-of-page {
+        width: 100%; /* Główna część strony zajmuje 100% szerokości */
+        padding: 5px;
+        flex-grow: 1; /* Umożliwia rozciąganie elementu */
+        box-sizing: border-box; /* Upewnij się, że padding i border są uwzględniane w szerokości */
+    }
+
+
+    /* Karta produktu */
     .product-card {
-        width: 48%; /* Dwa produkty na szerokość ekranu */
+        border: 1px solid #eaeaea; /* Obwódka karty produktu */
+        border-radius: 10px; /* Zaokrąglone rogi karty */
+        overflow: hidden; /* Ukrycie elementów wychodzących poza obszar karty */
+        transition: box-shadow 0.3s ease-in-out; /* Płynna zmiana cienia przy najechaniu */
+        display: flex; /* Flexbox w celu lepszego rozmieszczenia elementów w karcie */
+        flex-direction: column; /* Układ elementów w kolumnie (od góry do dołu) */
+        background-color: white; /* Białe tło */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Lekki cień */
+        cursor: pointer; /* Kursor zmienia się na wskaźnik (ręka) */
+    }
+}
+/* RESPONSYWNOŚĆ */
+@media (max-width: 600px) {
+    .product-buttons {
+        flex-direction: column; /* Zmiana układu przycisków na kolumnowy */
+        align-items: center; /* Wyrównanie przycisków do środka */
+        gap: 10px; /* Odstęp między przyciskami */
+    }
+    .all-products-container {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Kolumny o minimalnej szerokości 200px */
+        gap: 15px; /* Odstęp między kartami produktów */
+        width: 100%; /* Szerokość na 100% */
+        padding: 1px;
     }
 
-    /* Zmniejszenie fontów */
-    .product-name {
-        font-size: 16px;
-    }
-
-    .product-price {
-        font-size: 14px;
-    }
-
-    .product-description {
-        font-size: 12px;
-    }
-
-    .add-to-cart {
-        font-size: 14px;
-    }
-
-    .view-details {
-        font-size: 14px;
+    .add-to-cart,
+    .view-details-button {
+        width: 90%; /* Przycisk zajmuje 90% szerokości */
     }
 }
 
+/* Zmniejszenie czcionki na bardzo małych ekranach */
 @media (max-width: 480px) {
-    /* Zmiana dla bardzo małych ekranów */
-    .product-card {
-        width: 100%;
-    }
-
     .product-name {
-        font-size: 14px;
+        font-size: 14px; /* Mniejsza czcionka nazwy produktu */
     }
 
     .product-price {
-        font-size: 12px;
+        font-size: 12px; /* Mniejsza czcionka ceny */
     }
 
     .product-description {
-        font-size: 10px;
+        font-size: 10px; /* Mniejsza czcionka opisu */
     }
 
-    .add-to-cart, .view-details {
-        font-size: 14px;
+    .add-to-cart,
+    .view-details {
+        font-size: 14px; /* Mniejsza czcionka przycisków */
     }
+}
+
+/* Sidebar */
+.products-sidebar {
+    width: 22%; /* Sidebar zajmuje 20% szerokości */
+    padding: 20px 30px; /* Padding wewnętrzny */
+    box-sizing: border-box; /* Wlicza padding i border do rozmiaru elementu */
+    max-height: calc(100vh - 80px); /* Maksymalna wysokość sidebara: 100% wysokości widocznej strony minus wysokość nagłówka */
+    overflow-y: auto; /* Dodanie scrolla pionowego, jeśli zawartość wykracza poza wysokość */
+    position: sticky; /* Sticky sidebar, który pozostaje widoczny podczas przewijania */
+    top: 80px; /* Sidebar zaczyna być "przyklejony" 80px od góry */
+}
+
+/* Styl nagłówka sidebara */
+.sidebar-title {
+     /* Rozmiar czcionki */
+    margin-bottom: 20px; /* Odstęp od dołu */
+    font-weight: bold; /* Pogrubienie czcionki */
+    border-bottom: 1px solid #ccc; /* Dolna linia oddzielająca tytuł */
+    padding-bottom: 10px; /* Padding na dole tytułu */
+}
+
+/* Grupy filtrów */
+.filter-group {
+    margin-bottom: 30px; /* Odstęp między grupami filtrów */
+}
+
+.filter-group h6 {
+    margin-bottom: 10px; /* Odstęp od dołu */
+    font-size: 16px; /* Rozmiar czcionki */
+    font-weight: 600; /* Pogrubienie czcionki */
+    color: #333; /* Kolor czcionki */
+}
+
+.filter-group label {
+    display: block; /* Etykiety filtra na pełną szerokość */
+    margin-bottom: 8px; /* Odstęp między etykietami */
+    font-size: 14px; /* Rozmiar czcionki */
+    cursor: pointer; /* Kursor zmienia się na rękę */
+    color: #555; /* Kolor czcionki */
+}
+.filter-group label:hover {
+    color: #000000; /* Kolor czcionki */
+
+}
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
+    margin-right: 8px; /* Odstęp między checkboxem/radiobuttonem a etykietą */
+}
+
+/* Przycisk zastosowania filtrów */
+.apply-filters-button {
+    background-color: #111; /* Ciemne tło przycisku */
+    color: white; /* Kolor tekstu na biały */
+    border: none; /* Brak obramowania */
+    padding: 12px 20px; /* Padding wewnętrzny */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    font-size: 14px; /* Rozmiar czcionki */
+    font-weight: bold; /* Pogrubienie czcionki */
+    width: 100%; /* Szerokość przycisku na 100% */
+    cursor: pointer; /* Kursor zmienia się na rękę */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru przy najechaniu */
+}
+
+.apply-filters-button:hover {
+    background-color: #444; /* Zmiana koloru tła przy najechaniu */
+}
+
+/* Scrollbar dla sidebara */
+.products-sidebar::-webkit-scrollbar {
+    width: 6px; /* Szerokość paska przewijania */
+}
+
+.products-sidebar::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Kolor paska przewijania */
+    border-radius: 3px; /* Zaokrąglenie paska */
+}
+
+.products-sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa; /* Zmiana koloru paska przy najechaniu */
 }

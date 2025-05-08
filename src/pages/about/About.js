@@ -17,6 +17,7 @@ const About = () => {
     <div>
       <AboutHero />
       <div className="about-container">
+        
         {/* Sekcja 1 */}
         <section className="about-hero" data-aos="fade-up">
           <div className='section-div'>
@@ -27,7 +28,7 @@ const About = () => {
                 Since day one, our mission has been to deliver high-quality footwear and apparel that speaks to individuality and bold expression.
               </p>
             </div>
-            <div className="hero-image-container" style={{ backgroundImage: `url(${photo1})` }}>
+            <div className="about-image-container" style={{ backgroundImage: `url(${photo1})` }}>
               <div className="overlay">
                 <span className="overlay-text">Discover</span>
               </div>
@@ -38,7 +39,7 @@ const About = () => {
         {/* Sekcja 2 */}
         <section className="about-values" data-aos="fade-up" data-aos-delay="200">
           <div className='section-div'>
-            <div className="hero-image-container" style={{ backgroundImage: `url(${photo2})` }}>
+            <div className="about-image-container" style={{ backgroundImage: `url(${photo2})` }}>
               <div className="overlay">
                 <p className="overlay-text">Our Values</p>
               </div>
@@ -62,7 +63,7 @@ const About = () => {
                 Whether you're walking city streets or heading into something big, UrbanStep is made to go with you.
               </p>
             </div>
-            <div className="hero-image-container" style={{ backgroundImage: `url(${photo3})` }}>
+            <div className="about-image-container" style={{ backgroundImage: `url(${photo3})` }}>
               <div className="overlay">
                 <span className="overlay-text">Empowerment</span>
               </div>

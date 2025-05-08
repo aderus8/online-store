@@ -12,6 +12,7 @@ import { AuthProvider, useAuth } from './components/context/AuthContext';
 import './App.css';
 import AllProducts from './pages/allProducts/AllProducts';
 import UserProducts from './components/UserProduct';
+import Newpage from './pages/allProducts/new';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -40,6 +41,7 @@ function App() {
                   </PrivateRoute>
                 } />
                 <Route path="/all-products" element={<AllProducts />} />
+                <Route path="/offer" element={<Newpage />} />
               </Routes>
             </main>
             <Footer />

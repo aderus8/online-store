@@ -72,7 +72,8 @@ const Navbar = () => {
           <NavLink to="/" end>Home</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/all-products">All Products</NavLink>
-          <NavLink to="/user-products">User Products</NavLink>
+          <NavLink to="/offer">Offer</NavLink>
+          {/* <NavLink to="/user-products">User</NavLink> */}
           <NavLink to="/contact">Contact</NavLink>
         </div>
       )}
@@ -135,6 +136,11 @@ const Navbar = () => {
 
             <NavLink to="/all-products" onClick={() => setIsMenuOpen(false)} className="mobile-link">
               <div className='h3-nav'>All products</div>
+              <FaArrowRight className="arrow-icon" />
+            </NavLink>
+
+            <NavLink to="/offer" onClick={() => setIsMenuOpen(false)} className="mobile-link">
+              <div className='h3-nav'>Offer</div>
               <FaArrowRight className="arrow-icon" />
             </NavLink>
 

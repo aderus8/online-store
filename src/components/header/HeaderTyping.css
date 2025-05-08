@@ -2,10 +2,10 @@
     text-align: center;
     margin-bottom: 2rem;
     max-width: 100%;
-    padding: 0rem 2rem;
+    /* padding: 0rem 2rem; */
 }
 
-.header-container::after {
+/* .header-container::after {
     content: '';
     display: block;
     height: 4px;
@@ -15,10 +15,10 @@
     background: linear-gradient(to right, #555, #888, #555);
     box-shadow: 0 0 5px rgba(138, 138, 138, 0.7);
     /* subtelny efekt świetlny */
-    animation: drawLine 1.5s ease-out forwards;
-    border-radius: 20px;
+    /* animation: drawLine 1.5s ease-out forwards; */
+    /* border-radius: 20px; */
 
-}
+/* } */
 
 
 /* Tryb ciemny - metaliczny szary z ciemniejszym cieniem */
@@ -30,11 +30,11 @@ body.dark .header-container::after {
 }
 
 /* Animacja linii */
-@keyframes drawLine {
+/* @keyframes drawLine {
     to {
         width: 180px;
     }
-}
+} */
 
 
 .typing-effect {
