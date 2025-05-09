@@ -13,7 +13,7 @@ const productsDATA = {
           description: "Stylowa bluza z kapturem w kolorze Alpine Blue, wykonana z miękkiej bawełny.",
           company: "Polo Ralph Lauren",
           color: "Alpine Blue",
-          size: "Various Sizes",
+            size: "S, M, L, XL",
           url: "https://www.zalando.pl/polo-ralph-lauren-island-fleece-long-sleeve-sweatshirt-bluza-z-kapturem-alpine-blue-po221j09u-k13.html"
         },
         {
@@ -37,7 +37,7 @@ const productsDATA = {
           description: "Czarna bluza rozpinana z białymi detalami, idealna na co dzień.",
           company: "Jordan",
           color: "Black/White",
-          size: "Various Sizes",
+            size: "S, M, L, XL",
           url: "https://www.zalando.pl/jordan-bluza-rozpinana-blackwhite-joc21j022-q11.html"
         }
       

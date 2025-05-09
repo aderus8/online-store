@@ -1,0 +1,24 @@
+.product-details-container{
+    padding: 2rem 3%;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.product-details-container img{
+    max-width: 400px;
+    width: 30vw;
+    border-radius: 10px;
+}
+.product-details{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+}
+.product-details h5{
+    margin-bottom: 20px;
+}
+.product-details p{
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+}

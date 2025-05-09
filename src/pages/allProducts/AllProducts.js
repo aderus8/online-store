@@ -5,6 +5,7 @@ import "./AllProducts.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProductCard from '../../components/product/productCard/ProductCard';
+import { useNavigate } from 'react-router-dom';
 
 const AllProducts = () => {
   const [showFilters, setShowFilters] = useState(true);
@@ -21,6 +22,7 @@ const AllProducts = () => {
   const toggleFilters = () => setShowFilters(prev => !prev);
   const toggleMobileFilters = () => setShowMobileFilters(prev => !prev);
 
+  const navigate = useNavigate();
   // Nasłuchujemy zmian szerokości okna
   useEffect(() => {
     const handleResize = () => {
@@ -224,8 +226,7 @@ const AllProducts = () => {
                   price={product.price}
                   company={product.company}
                   image={product.image}
-                  onClick={() => navigate(`/product/${product.id}`)} // przykładowa trasa
-                />
+                  onClick={() => navigate(`/product/${product.id}`)}                />
               ))
             ) : (
               <p>Brak produktów spełniających kryteria.</p>

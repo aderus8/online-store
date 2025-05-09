@@ -13,6 +13,7 @@ import './App.css';
 import AllProducts from './pages/allProducts/AllProducts';
 import UserProducts from './components/UserProduct';
 import Offer from './pages/offer/Offer';
+import ProductDetails from './pages/productDetails/ProductDetails';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -42,6 +43,9 @@ function App() {
                 } />
                 <Route path="/all-products" element={<AllProducts />} />
                 <Route path="/offer" element={<Offer />} />
+                <Route path="/product/:id" element={<ProductDetails />} />
+                {/* <Route path="/offer/:id" element={<Offer />} /> */}
+        
               </Routes>
             </main>
             <Footer />
