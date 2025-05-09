@@ -1,0 +1,74 @@
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 7%;
+  height: 700px;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.promo-grid-left,
+.promo-grid-right {
+  height: 100%;
+}
+
+.promo-grid-left {
+  width: 100%;
+  overflow: hidden;
+}
+
+.promo-grid-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.promo-grid-right-1,
+.promo-grid-right-2 {
+  flex: 1;
+  overflow: hidden;
+}
+
+.promo-grid-right-2 {
+  display: flex;
+  gap: 1rem;
+}
+
+.promo-grid-right-2-1,
+.promo-grid-right-2-2 {
+  flex: 1;
+  overflow: hidden;
+}
+.promo-grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.promo-grid-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.promo-grid-div-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.3 ease;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); /* Cień: 2px w poziomie, 2px w pionie, rozmycie 5px, kolor czarny */
+}
+.promo-grid-div:hover .promo-grid-div-text {
+  font-size: 2.2rem;
+
+}

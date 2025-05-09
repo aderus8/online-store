@@ -1,18 +1,9 @@
 .new-arrivals {
-  padding: 30px 20px;
+  /* padding: 30px 20px; */
   text-align: center;
+  margin-top: 60px;
 }
 
-.new-arrivals .title {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.new-arrivals .subtitle {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 40px;
-}
 
 .components-wrapper {
   display: flex;

@@ -1,7 +1,7 @@
 
 .offer-hero {
     margin-top: 80px;
-    width: 100vw;
+    width: 100%;
     height: 500px;
     display: flex;
     flex-direction: row;

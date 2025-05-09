@@ -9,7 +9,7 @@
 }
 
 .card-arrivals:hover {
-  transform: translateY(-10px) !important;
+  transform: translateY(-15px) !important;
 }
 
 .card-arrivals img {
