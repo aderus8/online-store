@@ -113,6 +113,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    color: black;
 }
 .filter-icon{
     font-size: 20px;
@@ -249,7 +250,7 @@ body.dark .product-company {
     flex-direction: row; /* Układ w rzędzie */
     justify-content: space-between; /* Rozmieszczenie z przestrzenią między elementami */
     align-items: center; /* Wyrównanie do środka w pionie */
-    padding:0 10px;
+    padding:0 5%;
 
 }
 
