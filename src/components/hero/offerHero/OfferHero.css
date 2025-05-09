@@ -86,3 +86,23 @@
 .offer-hero-photo:not(:hover) {
     flex: 1;
 }
+
+@media (max-width: 768px){
+    .offer-hero {
+        flex-direction: column;
+    }
+    
+.offer-hero-left {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* lub space-evenly */
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+.offer-hero-left h2{
+    margin: 1%;
+}
+
+}
