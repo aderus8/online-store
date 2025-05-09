@@ -1,0 +1,94 @@
+.card-arrivals {
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease !important;
+  cursor: pointer;
+}
+
+.card-arrivals:hover {
+  transform: translateY(-10px) !important;
+}
+
+.card-arrivals img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  display: block;
+  object-fit: cover;
+}
+
+.card-arrivals-content {
+  padding: 1rem;
+  text-align: left;
+}
+
+.card-arrivals-content h6 {
+  margin-top: 0;
+  font-size: 1rem; /* ~16px */
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.card-arrivals-content p {
+  color: #555;
+  margin: 0.5rem 0;
+  font-size: 0.875rem; /* ~14px */
+  line-height: 1.5;
+}
+
+.card-arrivals-content ul {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.card-arrivals-content button {
+  background-color: black;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.card-arrivals-content button:hover {
+  background-color: #333;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 768px) {
+  .card-arrivals-content h6 {
+    font-size: 0.95rem;
+  }
+
+  .card-arrivals-content p,
+  .card-arrivals-content ul,
+  .card-arrivals-content button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-arrivals {
+    max-width: 90%;
+  }
+
+  .card-arrivals-content {
+    padding: 0.75rem;
+  }
+
+  .card-arrivals-content h6 {
+    font-size: 0.9rem;
+  }
+
+  .card-arrivals-content p,
+  .card-arrivals-content ul,
+  .card-arrivals-content button {
+    font-size: 0.75rem;
+  }
+}

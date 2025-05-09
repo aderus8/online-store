@@ -7,21 +7,6 @@ import AuthForm from '../../components/form/AuthForm';
 
 const Auth = () => {
   const { theme } = useTheme();
-  // const [isLogin, setIsLogin] = useState(true);
-
-  // const handleToggle = () => {
-  //   setIsLogin(!isLogin);
-  // };
-
-  // useEffect(() => {
-  //   AOS.init({ duration: 800, once: true });
-  // }, []);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     AOS.refreshHard();
-  //   }, 100);
-  // }, [theme, isLogin]);
 
   return (
     <div

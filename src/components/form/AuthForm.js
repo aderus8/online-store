@@ -25,7 +25,6 @@ export default function AuthForm() {
     setSuccessMessage(null);  // Resetowanie komunikatów sukcesu
   };
 
-  // Inicjalizacja AOS do animacji
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
@@ -37,11 +36,10 @@ export default function AuthForm() {
     }, 100);
   }, [theme, isLogin]);
 
-  // Obsługuje stan zalogowanego użytkownika
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        navigate('/');  // Jeśli użytkownik jest zalogowany, przekierowujemy na stronę główną
+        navigate('/'); 
       }
     });
   }, [navigate]);
