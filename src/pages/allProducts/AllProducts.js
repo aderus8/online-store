@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import productsDATA from '../../components/productsData'; import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import CTAButton from '../../components/button/Button';
-import Header from '../../components/header/HeaderTyping';
-import HeaderTyping from '../../components/header/HeaderTyping';
 import { FaFilter, FaTimes } from 'react-icons/fa';
 import "./AllProducts.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import SectionHeader from '../../components/header/sectionHeader/SectionHeader';
+import ProductCard from '../../components/product/productCard/ProductCard';
 
 const AllProducts = () => {
   const [showFilters, setShowFilters] = useState(true);
@@ -113,6 +110,7 @@ const AllProducts = () => {
                     value={company}
                     onChange={() => handleCheckboxChange(setSelectedCompanies, company)}
                   />
+                    <span className="custom-checkbox-box"></span>
                   {company}
                 </label>
               ))}
@@ -131,6 +129,7 @@ const AllProducts = () => {
                 </label>
               ))}
             </div>
+
 
             <div className="filter-group">
               <h6>Price</h6>
@@ -201,10 +200,6 @@ const AllProducts = () => {
 
 
         <div className='offer-rest'>
-          {/* <div className='offer-header'> 
-                        <SectionHeader title='All products' />    
-                        <HeaderTyping title='All products' />    
-                    </div> */}
           <div className='offer-filters'>
             Products: {filteredProducts.length}
             {!isMobile ? (
@@ -222,17 +217,15 @@ const AllProducts = () => {
 
           <div className='offer-products-container'>
             {filteredProducts.length > 0 ? (
-              filteredProducts.map((product, index) => (
-                <div key={product.id} className='product-card'>
-                  <div className='product-image-container'>
-                    <img src={product.image} alt={product.name} className="product-image" />
-                  </div>
-                  <h3 className="product-name">{product.name}</h3>
-                  <div className='price-company'>
-                    <p className="product-price">{product.price} zł</p>
-                    <p className="product-company">{product.company}</p>
-                  </div>
-                </div>
+              filteredProducts.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  name={product.name}
+                  price={product.price}
+                  company={product.company}
+                  image={product.image}
+                  onClick={() => navigate(`/product/${product.id}`)} // przykładowa trasa
+                />
               ))
             ) : (
               <p>Brak produktów spełniających kryteria.</p>
