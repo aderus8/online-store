@@ -176,7 +176,6 @@
     }
 }
 @media (max-width: 500px) {
-
     .offer-products-container {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Kolumny o minimalnej szerokości 200px */
 
@@ -237,11 +236,11 @@ body.dark .product-company {
 
 /* Nazwa produktu */
 .product-name {
-    font-size: 18px; /* Rozmiar czcionki */
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     font-weight: bold; /* Pogrubienie tekstu */
     margin: 10px 0; /* Odstęp górny i dolny */
     color: #333; /* Kolor tekstu */
-    padding-left: 10px;
+    padding: 0 10px;
 }
 
 /* Cena + firma - ułożenie obok siebie */
