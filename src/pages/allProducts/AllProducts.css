@@ -164,8 +164,8 @@
         gap: 10px; /* Odstęp między przyciskami */
     }
     .offer-products-container {
-        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Kolumny o minimalnej szerokości 200px */
-        gap: 15px; /* Odstęp między kartami produktów */
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); /* Kolumny o minimalnej szerokości 200px */
+        gap: 10px; /* Odstęp między kartami produktów */
         width: 100%; /* Szerokość na 100% */
         padding: 1px;
     }
@@ -173,6 +173,13 @@
     .add-to-cart,
     .view-details-button {
         width: 90%; /* Przycisk zajmuje 90% szerokości */
+    }
+}
+@media (max-width: 500px) {
+
+    .offer-products-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Kolumny o minimalnej szerokości 200px */
+
     }
 }
 
