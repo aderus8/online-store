@@ -100,7 +100,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 60px;
+    padding: 10px 5%;
 }
 .offer-filters button{
     display: inline-flex;
@@ -157,9 +157,7 @@
         width: 100%; /* Szerokość na 100% */
         padding: 10px;
     }
-        .offer-filters-container{
-        padding: 20px 5%;
-    }
+
 }
 
 @media (max-width: 600px) {
