@@ -147,6 +147,7 @@
     .offer-products-container {
         grid-template-columns: repeat(auto-fill, minmax(235px, 1fr)); /* Kolumny o minimalnej szerokości 200px */
     }
+
 }
 
 @media (max-width: 768px){
@@ -155,6 +156,9 @@
         gap: 15px; /* Odstęp między kartami produktów */
         width: 100%; /* Szerokość na 100% */
         padding: 10px;
+    }
+        .offer-filters-container{
+        padding: 20px 5%;
     }
 }
 
