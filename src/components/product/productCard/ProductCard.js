@@ -9,7 +9,7 @@ const ProductCard = ({ name, price, company, image, onClick }) => {
       </div>
       <h3 className='product-name'>{name}</h3>
       <div className='price-company'>
-        <p className='product-price'>{price} zł</p>
+        <p className='product-price-card'>{price} zł</p>
         <p className='product-company'>{company}</p>
       </div>
     </div>

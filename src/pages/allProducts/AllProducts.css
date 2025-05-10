@@ -115,13 +115,20 @@
     /* Kursor zmienia się na rękę */
     transition: background-color 0.3s ease;
     letter-spacing: 1px;
+    margin-bottom: 5px;
     /* Rozmiar czcionki */
 
     /* Płynna zmiana koloru przy najechaniu */
 }
+.clear{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+
+}
 
 .apply-filters-button:hover {
-    background-color: #444;
+    background-color: #757575;
     /* Zmiana koloru tła przy najechaniu */
 }
 
