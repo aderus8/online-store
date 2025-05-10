@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import productsDATA from '../../components/productsData';
 import './ProductDetails.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,42 +10,46 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import HeaderTyping from '../../components/header/HeaderTyping';
-import SectionHeader from '../../components/header/sectionHeader/SectionHeader';
 
 const ProductDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = productsDATA.products.find(p => String(p.id) === id);
 
-  // Initialize AOS animation
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  if (!product) return <p>Product not found.</p>;
+  if (!product) return <p style={{ padding: "2rem" }}>Product not found.</p>;
 
   product.availableSizes = ["S", "M", "L", "XL"];
 
-  // 🟡 Produkty tej samej marki
   const relatedProducts = productsDATA.products.filter(
     (p) => p.company === product.company && String(p.id) !== id
   );
 
-  // 🟡 Produkty w tym samym kolorze
   const colorRelatedProducts = productsDATA.products.filter(
     (p) => p.color === product.color && String(p.id) !== id
   );
 
   return (
-    <>
+    <div className='product-details-page'>
+      <div className="breadcrumbs">
+        <span><Link to="/">Home</Link></span>
+        <span className="separator">/</span>
+        <span><Link to="/all-products">Products</Link></span>
+        <span className="separator">/</span>
+        <span className="current">{product.name}</span>
+      </div>
+
       <div className="product-details-container" data-aos="fade-up">
+
         <div className="product-details-img-container">
           <img src={product.image} alt={product.name} />
         </div>
         <div className="product-details">
           <h5>{product.name}</h5>
-          <p className="product-price">{product.price} zl</p>
+          <p className="product-price">{product.price} zł</p>
           <p><strong>Description:</strong> {product.description}</p>
           <p><strong>Brand:</strong> {product.company}</p>
           <p><strong>Color:</strong> {product.color}</p>
@@ -72,15 +76,15 @@ const ProductDetails = () => {
           <div className="product-actions">
             <button className="add-to-cart-btn">Add to cart</button>
             <button className="wishlist-btn">♡ Add to favorites</button>
-            <button className="share-btn">🔗 Share</button>
+            <button className="share-btn" onClick={() => navigator.clipboard.writeText(window.location.href)}>🔗 Share</button>
           </div>
         </div>
       </div>
 
-      {/* Slider for Related Products by Company */}
+
       {relatedProducts.length > 0 && (
-        <div className="related-products-slider" data-aos="fade-up">
-<h3> Explore more styles from {product.company} </h3>       
+        <div className="related-products-slider greybg" data-aos="fade-up">
+          <h3>Explore more styles from {product.company}</h3>
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -94,10 +98,9 @@ const ProductDetails = () => {
             }}
           >
             {relatedProducts.map((item) => (
-              <SwiperSlide key={item.id} >
+              <SwiperSlide key={item.id}>
                 <div
                   className="slider-item"
-                  style={{ cursor: 'pointer' }}
                   onClick={() => navigate(`/product/${item.id}`)}
                 >
                   <img src={item.image} alt={item.name} className="slider-product-img" />
@@ -110,10 +113,9 @@ const ProductDetails = () => {
         </div>
       )}
 
-      {/* Slider for Related Products by Color */}
       {colorRelatedProducts.length > 0 && (
         <div className="related-products-slider" data-aos="fade-up">
-<h3>Bring more {product.color} into your wardrobe </h3>      
+          <h3>Bring more {product.color} into your wardrobe</h3>
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -127,10 +129,9 @@ const ProductDetails = () => {
             }}
           >
             {colorRelatedProducts.map((item) => (
-              <SwiperSlide key={item.id} >
+              <SwiperSlide key={item.id}>
                 <div
                   className="slider-item"
-                  style={{ cursor: 'pointer' }}
                   onClick={() => navigate(`/product/${item.id}`)}
                 >
                   <img src={item.image} alt={item.name} className="slider-product-img" />
@@ -142,8 +143,8 @@ const ProductDetails = () => {
           </Swiper>
         </div>
       )}
-      <div className='bottom'></div>
-    </>
+
+    </div>
   );
 };
 
