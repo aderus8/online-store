@@ -80,7 +80,7 @@ const ProductDetails = () => {
       {/* Slider for Related Products by Company */}
       {relatedProducts.length > 0 && (
         <div className="related-products-slider" data-aos="fade-up">
-<SectionHeader title={`Explore more styles from ${product.company}`} />        
+<h3> Explore more styles from {product.company} </h3>       
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -90,7 +90,7 @@ const ProductDetails = () => {
             breakpoints={{
               1024: { slidesPerView: 5 },
               768: { slidesPerView: 3 },
-              0: { slidesPerView: 1 }
+              0: { slidesPerView: 2 }
             }}
           >
             {relatedProducts.map((item) => (
@@ -113,7 +113,7 @@ const ProductDetails = () => {
       {/* Slider for Related Products by Color */}
       {colorRelatedProducts.length > 0 && (
         <div className="related-products-slider" data-aos="fade-up">
-<SectionHeader title={`Bring more ${product.color} into your wardrobe`} />          
+<h3>Bring more {product.color} into your wardrobe </h3>      
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={20}
@@ -123,7 +123,7 @@ const ProductDetails = () => {
             breakpoints={{
               1024: { slidesPerView: 5 },
               768: { slidesPerView: 3 },
-              0: { slidesPerView: 1 }
+              0: { slidesPerView: 2 }
             }}
           >
             {colorRelatedProducts.map((item) => (

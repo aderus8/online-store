@@ -156,14 +156,17 @@
 
 
 .related-products-slider {
-  margin-top: 60px;
-  padding: 0 20px;
+  padding: 40px 5%;
 }
 
 .related-products-slider h3 {
   margin-bottom: 20px;
+  margin-left: 2%;
   font-size: 1.5rem;
-  text-align: center;
+  text-align: start;
+  background: linear-gradient(to right, #636363, #575757, #242424); /* mocniejszy kontrast */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .slider-item {
@@ -208,12 +211,14 @@
 /* Responsywność */
 @media screen and (max-width: 768px) {
   .related-products-slider {
-    padding: 0;
+    padding: 40px 0;
   }
+  
 
   .slider-item {
-    height: auto; /* Zmieniona wysokość na auto dla małych ekranów */
+    height: 350px; /* Zmieniona wysokość na auto dla małych ekranów */
     padding: 10px;
+    
   }
 
   .slider-item h4 {
