@@ -29,6 +29,8 @@ body.dark .header-container::after {
     /* delikatniejszy cień */
 }
 
+
+
 /* Animacja linii */
 /* @keyframes drawLine {
     to {
@@ -69,10 +71,13 @@ body.dark .header-container::after {
     font-family: 'Satoshi', sans-serif;
     
 }
+body.dark .typing-effect h2{
+    color: #fefefe; 
 
+}
 
 body.dark .header-container::after {
-    /* background: linear-gradient(to right, #444, #666, #888);  */
+    background: linear-gradient(to right, #fefefe, #e1dcdc, #888); 
     /* box-shadow: 0 0 3px rgba(188, 144, 1, 0.445);  */
 }
 

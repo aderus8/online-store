@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import './HeroPhoto.css';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = ({ backgroundImage, text }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const navigate = useNavigate();
+
+
 
     return (
         <section 
@@ -12,7 +16,7 @@ const Hero = ({ backgroundImage, text }) => {
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className='hero-photo-overlay'>
-            <div className="hero-photo-content">
+            <div className="hero-photo-content" >
                 <h1>{text}</h1>
             </div>
             </div>

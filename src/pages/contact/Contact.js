@@ -32,9 +32,9 @@ const Contact = () => {
 
       </section>
 
-
+{/* 
       {/* Druga sekcja z formularzem */}
-      <section className="contact-form">
+      {/* <section className="contact-form">
         <form onSubmit={handleSubmit} className="form">
           <input
             type="text"
@@ -63,8 +63,8 @@ const Contact = () => {
           Get Started
         </CTAButton>
           {/* <button type="submit">Wyślij</button> */}
-        </form>
-      </section>
+        {/* </form> */}
+      {/* </section> */} 
 
       {/* Trzecia sekcja z danymi kontaktowymi */}
       <section className="contact-info">
@@ -80,7 +80,7 @@ const Contact = () => {
           <FaMapMarkerAlt />
           <p>ul. Przykładowa 1, Warszawa</p>
         </div>
-      </section>
+      </section> 
     </section>
   );
 };

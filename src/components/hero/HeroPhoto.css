@@ -12,6 +12,8 @@
     /* padding: 0 20px; */
     transition: transform 0.3s ease-out;
     cursor: pointer;
+    font-style: none;
+
 }
 
 .hero-photo.hovered .hero-photo-overlay {

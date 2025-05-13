@@ -22,7 +22,7 @@ const About = () => {
         <section className="about-hero" data-aos="fade-up">
           <div className='section-div'>
             <div className='section-div-text'>
-              <h2>About Our Company</h2>
+              <h3>About Our Company</h3>
               <p>
                 At out company, we blend fashion with function to help you move through life with confidence.
                 Since day one, our mission has been to deliver high-quality footwear and apparel that speaks to individuality and bold expression.

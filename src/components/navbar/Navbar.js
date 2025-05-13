@@ -75,6 +75,7 @@ const Navbar = () => {
           <NavLink to="/offer">Offer</NavLink>
           {/* <NavLink to="/user-products">User</NavLink> */}
           <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/new">New</NavLink>
         </div>
       )}
 

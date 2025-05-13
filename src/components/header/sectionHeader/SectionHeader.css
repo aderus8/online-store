@@ -90,7 +90,10 @@ body.dark .section-header::after {
 body.dark .section-subtitle {
   color: #6e6e6e;
 }
+body.dark .section-header {
+    color: #fefefe; 
 
+}
 /* Responsywność */
 @media screen and (max-width: 768px) {
   .section-header {

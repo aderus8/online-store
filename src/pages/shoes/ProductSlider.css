@@ -1,0 +1,13 @@
+.product-1-slider-wrapper {
+  margin: 40px auto;
+  padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.slider-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}

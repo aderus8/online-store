@@ -14,20 +14,29 @@ import shoes from "../../assets/styles/shoes.jpg";
 import HeaderTyping from '../../components/header/HeaderTyping';
 import SectionHeader from '../../components/header/sectionHeader/SectionHeader';
 import FindSomethingForYou from '../../components/section/findSth/FindSth';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+
+
 
 
   return (
     <div className="home-container">
         <MainHero/>
         <div className='heroes-container'>
+         <Link to="/shoes" className='hero-photo'>
          <Hero 
+          
           backgroundImage="https://sneakerbeast.pl/9805-thickbox_default/buty-adidas-superstar-c77154.jpg"
-          text="SHOES"/>
+          text="SHOES"
+          /> </Link>
+         <Link to="/shoes" className='hero-photo'>
+
           <Hero 
           backgroundImage="https://cassette.sphdigital.com.sg/image/harpersbazaar/7cc413b3997418b621595bb1aecd9a427faf6e966610a153357a4d92812748ba"
-          text="Clothes"/>
+          text="Clothes"
+          onClick="/shoes"/> </Link>
         </div>
         {/* <WhyUs /> */}
         <BrandSlider/>
