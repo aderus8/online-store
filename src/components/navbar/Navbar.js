@@ -145,10 +145,11 @@ const Navbar = () => {
               <FaArrowRight className="arrow-icon" />
             </NavLink>
 
-            <NavLink to="/contact" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>Contact</div>
+            <NavLink to="/shoes" onClick={() => setIsMenuOpen(false)} className="mobile-link">
+              <div className='h3-nav'>Shoes</div>
               <FaArrowRight className="arrow-icon" />
             </NavLink>
+
 
             <NavLink to="/auth" onClick={() => setIsMenuOpen(false)} className="mobile-link">
               <div className='h3-nav'>Account</div>
@@ -163,7 +164,7 @@ const Navbar = () => {
             )}
 
             <div className="nav-mobile-text-box">
-              <span className="nav-mobile-text">Take the step that sets you apart. Join our team of dedicated athletes.</span>
+              <span className="nav-mobile-text">Take the step that sets you apart.</span>
             </div>
 
             <CTAButton to="/auth" variant="gold">

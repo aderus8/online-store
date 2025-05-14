@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './AboutHero.css';
-import heroImage from "../../assets/styles/store5.jpg";
+import heroImage from "../../../assets/styles/store5.jpg";
 
 const AboutHero = () => {
   useEffect(() => {

@@ -4,7 +4,7 @@ import sport from "../../../assets/styles/sport.jpg";
 import casual from "../../../assets/styles/casual.jpg";
 import elegant from "../../../assets/styles/elegant.avif";
 import shoes from "../../../assets/styles/shoes.jpg";
-import SectionHeader from '../../../components/header/sectionHeader/SectionHeader';
+import SectionHeader from '../../header/sectionHeader/SectionHeader';
 import CTAButton from '../../button/Button';
 
 const categories = [

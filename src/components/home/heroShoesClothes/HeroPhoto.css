@@ -12,8 +12,7 @@
     /* padding: 0 20px; */
     transition: transform 0.3s ease-out;
     cursor: pointer;
-    font-style: none;
-
+    text-decoration: none;
 }
 
 .hero-photo.hovered .hero-photo-overlay {
@@ -29,11 +28,13 @@
     align-items: center;
     justify-content: center;
     transition: 0.8s ease;
+    
   }
 
 .hero-photo-content {
     max-width: 600px;
     z-index: 10; /* Tekst będzie nad zdjęciem */
+    
 }
 
 .hero-photo h1 {
@@ -42,6 +43,7 @@
     margin-bottom: 20px;
     text-transform: uppercase;
     transition: transform 0.3s ease-out;
+    text-decoration: none;
 }
 
 /* Efekt paralaksy: przesuwamy tekst w dół przy hoverze */

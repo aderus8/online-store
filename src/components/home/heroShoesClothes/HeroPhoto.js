@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './HeroPhoto.css';
 import { useNavigate } from 'react-router-dom';
 
-const Hero = ({ backgroundImage, text }) => {
+const HeroShoesClothes = ({ backgroundImage, text }) => {
     const [isHovered, setIsHovered] = useState(false);
     const navigate = useNavigate();
 
@@ -24,4 +24,4 @@ const Hero = ({ backgroundImage, text }) => {
     );
 };
 
-export default Hero;
+export default HeroShoesClothes;

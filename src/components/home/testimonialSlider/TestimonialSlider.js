@@ -3,7 +3,7 @@ import './TestimonialSlider.css';
 import { FaStar } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import bgImage from '../../assets/styles/clients.jpg';
+import bgImage from '../../../assets/styles/clients.jpg';
 
 const testimonials = [
   {

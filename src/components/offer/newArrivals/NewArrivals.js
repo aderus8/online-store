@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewArrivals.css';
 import CardArrivals from '../cardArrival/CardArrivals';
-import HeaderTyping from '../../header/HeaderTyping';
+import HeaderTyping from '../../header/typingHeader/HeaderTyping';
 
 const NewArrivals = () => {
   return (

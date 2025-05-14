@@ -6,13 +6,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './ProductSlider.css'; // opcjonalny własny styl
+import productsDATA from '../../productsData';
+import ProductCard from '../../product/productCard/ProductCard';
 
-import productsDATA from '../../components/productsData'; // lub inny import
-import ProductCard from '../../components/product/productCard/ProductCard';
-
-const ProductSlider = () => {
+const ProductSlider = ({productType}) => {
   const products = productsDATA.products
-  .filter(product => product.type === "shoes")
+  .filter(product => product.type === productType)
   .slice(0, 10); // wybrane 10 najnowszych
 
   

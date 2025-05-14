@@ -5,15 +5,14 @@ import { FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./BrandSlider.css"; // styl poniżej
-import adidas from "../../assets/logos/adidas.svg"; // dostosuj ścieżkę
-import nike from "../../assets/logos/nike.png"; // dostosuj ścieżkę
-import ck from "../../assets/logos/ck.png"; // dostosuj ścieżkę
-import nb from "../../assets/logos/nb.png"; // dostosuj ścieżkę
-import puma from "../../assets/logos/puma.svg"; // dostosuj ścieżkę
-import reebok from "../../assets/logos/reebook.svg"; // dostosuj ścieżkę
-import tommy from "../../assets/logos/tommy.svg"; // dostosuj ścieżkę
-import zara from "../../assets/logos/zara.png"; // dostosuj ścieżkę
-import HeaderTyping from "../header/HeaderTyping";
+import adidas from "../../../assets/logos/adidas.svg"; // dostosuj ścieżkę
+import nike from "../../../assets/logos/nike.png"; // dostosuj ścieżkę
+import ck from "../../../assets/logos/ck.png"; // dostosuj ścieżkę
+import nb from "../../../assets/logos/nb.png"; // dostosuj ścieżkę
+import puma from "../../../assets/logos/puma.svg"; // dostosuj ścieżkę
+import reebok from "../../../assets/logos/reebook.svg"; // dostosuj ścieżkę
+import tommy from "../../../assets/logos/tommy.svg"; // dostosuj ścieżkę
+import zara from "../../../assets/logos/zara.png"; // dostosuj ścieżkę
 
 const brands = [
     { name: "Nike", logo: nike },

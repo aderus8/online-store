@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './PromoGrid.css';
-import HeaderTyping from '../../header/HeaderTyping';
+import HeaderTyping from '../../header/typingHeader/HeaderTyping';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

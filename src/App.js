@@ -14,8 +14,8 @@ import AllProducts from './pages/allProducts/AllProducts';
 import UserProducts from './components/UserProduct';
 import Offer from './pages/offer/Offer';
 import ProductDetails from './pages/productDetails/ProductDetails';
-import NewPage from './pages/contact/NewPage';
 import ShoesPage from './pages/shoes/ShoesPage';
+import Clothes from './pages/clothes/Clothes';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -33,7 +33,7 @@ function App() {
             <main className="main-content">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/new" element={<NewPage />} />
+                <Route path="/clothes" element={<Clothes />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/auth" element={<Auth />} />

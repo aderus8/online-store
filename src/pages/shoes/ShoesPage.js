@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import './ShoesPage.css';
 import heroImg from "../../assets/styles/shoes.avif";
-import ShoesBanner from './ShoesBanner';
-import ProductSlider from './ProductSlider';
+import ProductSlider from '../../components/slider/productSlider/ProductSlider';
 
 const ShoesPage = () => {
-
 
     return (
         <div className="shoes-page-container">
             <ShoesBanner />
 
-            <ProductSlider />
+            <ProductSlider productType="shoes"/>
 
             <div className='shoes-page-hero'
                 style={{ backgroundImage: `url(${heroImg})` }}>

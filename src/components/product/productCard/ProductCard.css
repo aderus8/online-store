@@ -1,5 +1,5 @@
 /* Karta produktu */
-.product-card {
+.product-card{
     border: 1px solid #eaeaea; /* Obwódka karty produktu */
     /* border-radius: 10px; Zaokrąglone rogi karty */
     overflow: hidden; /* Ukrycie elementów wychodzących poza obszar karty */
@@ -11,6 +11,7 @@
     cursor: pointer; /* Kursor zmienia się na wskaźnik (ręka) */
     justify-content: space-between;
 }
+
 
 /* Ciemny tryb */
 body.dark .product-card {

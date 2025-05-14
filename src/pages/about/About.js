@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './About.css'; // Create this file for styling
-import AboutHero from '../../components/hero/AboutHero';
+import AboutHero from '../../components/about/heroAbout/AboutHero';
 import photo1 from '../../assets/styles/store1.jpg'; // Przykładowe lokalne zdjęcie
 import photo2 from '../../assets/styles/store2.jpg'; // Przykładowe lokalne zdjęcie
 import photo3 from '../../assets/styles/store3.jpg'; // Przykładowe lokalne zdjęcie
-import LookingAheadHero from '../../components/hero/LookingAheadHero';
+import LookingAheadHero from '../../components/about/heroLookingAhead/LookingAheadHero';
 
 const About = () => {
   useEffect(() => {

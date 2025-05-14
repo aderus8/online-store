@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import CTAButton from '../../components/button/Button';
-import Header from '../../components/header/HeaderTyping';
-import HeaderTyping from '../../components/header/HeaderTyping';
+import HeaderTyping from '../../components/header/typingHeader/HeaderTyping';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
