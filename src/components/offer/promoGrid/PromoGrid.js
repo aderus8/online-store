@@ -27,7 +27,7 @@ const PromoGrid = () => {
                         src="https://static.reserved.com/media/catalog/product/6/9/6917H-05X-003-1-938136_5.jpg"
                         alt="Promo man"
                     />
-                    <h1 className="promo-grid-div-text">Man</h1>
+                    <h1 className="promo-grid-div-text">Men</h1>
                 </div>
 
             </div>

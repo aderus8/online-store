@@ -1,3 +1,6 @@
 .clothes-page{
-    width: 100vw;
+    width: 100%;
+}
+.header-clothes{
+    padding: 5% !important;
 }

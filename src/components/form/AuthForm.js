@@ -73,7 +73,7 @@ export default function AuthForm() {
       data-aos-duration="800"
       data-aos-easing="ease-out-cubic"
     >
-      <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
+      {/* <h2>{isLogin ? 'Login' : 'Sign Up'}</h2> */}
       <form onSubmit={handleSubmit} className="auth-form">
         <input
           type="email"
@@ -89,7 +89,7 @@ export default function AuthForm() {
           placeholder="Password"
           required
         />
-        <button type="submit" className="auth-button">
+        <button type="submit" className="hero-video-cta-button">
           {isLogin ? "Log In" : "Register"}
         </button>
 

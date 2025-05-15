@@ -9,7 +9,7 @@
 .shoes-page-hero {
     position: relative;
     width: 100%;
-    height: 500px; /* zamiast 50vh – stała wysokość */
+    height: 600px; /* zamiast 50vh – stała wysokość */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -31,7 +31,7 @@
 }
 
 .shoes-page-desc{
-    padding: 10% 12%;
+    padding: 5% 7%;
     line-height: 1.6;
     color:white;
 }

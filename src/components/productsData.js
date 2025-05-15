@@ -34,7 +34,7 @@ const productsDATA = {
     },
     {
       id: 3,
-      name: "Jordan Bluza Rozpinana",
+      name: "Jordan Jacket",
       price: 305.00,
       image: "https://img01.ztat.net/article/spp-media-p1/6e3a18c7656948d1970686a834b6719b/b645663ddd854e888ed81d6e09a817f8.jpg?imwidth=1800",
       type: "clothing",
@@ -50,7 +50,7 @@ const productsDATA = {
       id: 4,
       name: "Levi's Denim Jacket",
       price: 89.99,
-      image: "https://img.modivo.cloud/product(7/b/4/0/7b40a29a2b29836483e065ba94d0c7ce9d8a878e_1_5400898170208.jpg,webp)/levis-r-kurtka-jeansowa-original-trucker-29945-0100-niebieski-regular-fit.webp",
+      image: "https://lsco.scene7.com/is/image/lsco/A48200016-dynamic1-pdp?fmt=jpeg&qlt=70&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=1120&hei=1494",
       type: "clothing",
       description: "A classic Levi’s jacket for everyday wear.",
       company: "Levi's",

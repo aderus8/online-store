@@ -4,6 +4,13 @@
     max-width: 100%;
     /* padding: 0rem 2rem; */
 }
+.header-container-small {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 7%;
+    max-width: 100%;
+    /* padding: 0rem 2rem; */
+}
 
 /* .header-container::after {
     content: '';
@@ -39,7 +46,7 @@ body.dark .header-container::after {
 } */
 
 
-.typing-effect {
+.typing-effect, .typing-effect-small {
     max-width: 100%;
     margin: 0 auto;
     word-break: break-word;
@@ -52,6 +59,16 @@ body.dark .header-container::after {
     display: inline-block;
     animation: fadeInChar 0.1s ease forwards;
 }
+.typing-effect-small h6 {
+    opacity: 0;
+    display: inline-block;
+    animation: fadeInChar 0.1s ease forwards;
+    color:#6d6d6d;
+    text-shadow: 1px 1px 5px #6d6d6d65;
+      font-size: clamp(1rem, 2vw, 1.6rem);
+
+}
+
 
 @keyframes fadeInChar {
     to {

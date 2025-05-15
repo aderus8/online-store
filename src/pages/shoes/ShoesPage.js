@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ShoesPage.css';
 import heroImg from "../../assets/styles/shoes.avif";
 import ProductSlider from '../../components/slider/productSlider/ProductSlider';
+import ShoesBanner from '../../components/shoes/shoesBanner/ShoesBanner';
 
 const ShoesPage = () => {
 
@@ -23,6 +24,8 @@ const ShoesPage = () => {
                             No shortcuts. No compromises. Just great shoes that feel as good as they look.
                             Ready to find your new favorite pair?
                         </p>
+                        <button className='hero-video-cta-button'> GET STARTED </button>
+
                     </section>
 
                 </div>

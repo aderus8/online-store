@@ -50,7 +50,7 @@ const ClothesBanner = () => {
         <div className="shoes-banner-content">
           <h1 className="shoes-banner-title">{slides[currentSlide].title}</h1>
           <p className="shoes-banner-subtitle">{slides[currentSlide].subtitle}</p>
-          <button className="shoes-banner-button" onClick={handleClick}>
+          <button className="hero-video-cta-button" onClick={handleClick}>
             Shop Clothes
           </button>
         </div>

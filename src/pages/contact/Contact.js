@@ -10,6 +10,8 @@ const Contact = () => {
     message: ''
   });
 
+
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -21,18 +23,16 @@ const Contact = () => {
 
   return (
     <section className="contact-container">
-
-
       <section >
-      <HeaderTyping
-        title="Contact Us"
-        subtitle="Have questions? Write to us — we’re happy to help!" />
+        <HeaderTyping
+          title="Let's Get in Touch"
+          subtitle="Have a question, feedback, or just want to say hello? Drop us a message!" />
 
       </section>
 
-{/* 
+   
       {/* Druga sekcja z formularzem */}
-      {/* <section className="contact-form">
+      <section className="contact-form">
         <form onSubmit={handleSubmit} className="form">
           <input
             type="text"
@@ -57,12 +57,11 @@ const Contact = () => {
             onChange={handleChange}
             required
           ></textarea>
-           <CTAButton to="/signup" variant="gold">
-          Get Started
-        </CTAButton>
-          {/* <button type="submit">Wyślij</button> */}
-        {/* </form> */}
-      {/* </section> */} 
+           <button className='hero-video-cta-button' to="/submit" variant="gold">
+          Send
+        </button>
+      </form>
+       </section>
 
       {/* Trzecia sekcja z danymi kontaktowymi */}
       <section className="contact-info">
@@ -78,7 +77,7 @@ const Contact = () => {
           <FaMapMarkerAlt />
           <p>ul. Przykładowa 1, Warszawa</p>
         </div>
-      </section> 
+      </section>
     </section>
   );
 };

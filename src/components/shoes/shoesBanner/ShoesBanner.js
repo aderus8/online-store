@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './ShoesBanner.css';
 import { useNavigate } from 'react-router-dom';
-import img1 from "../../assets/styles/shoesimg1.avif";
-import img2 from "../../assets/styles/shoesimg2.avif";
-import img3 from "../../assets/styles/shoesimg3.avif";
+import img1 from "../../../assets/styles/shoesimg1.avif";
+import img2 from "../../../assets/styles/shoesimg2.avif";
+import img3 from "../../../assets/styles/shoesimg3.avif";
 
 const slides = [
   {
@@ -50,7 +50,7 @@ const ShoesBanner = () => {
         <div className="shoes-banner-content">
           <h1 className="shoes-banner-title">{slides[currentSlide].title}</h1>
           <p className="shoes-banner-subtitle">{slides[currentSlide].subtitle}</p>
-          <button className="shoes-banner-button" onClick={handleClick}>
+          <button className="hero-video-cta-button" onClick={handleClick}>
             Shop Shoes
           </button>
         </div>

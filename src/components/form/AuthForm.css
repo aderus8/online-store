@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: flex-start;
   padding: 3rem 1rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 /* Formularz */
@@ -18,15 +18,14 @@
   max-width: 450px;
   min-width: 400px;
   text-align: center;
-  margin-top: 100px;
-
+  margin-top: 0px;
 }
 
 .auth-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
 }
 
 .auth-form input {
@@ -40,8 +39,8 @@
 
 .auth-form input:focus {
   outline: none;
-  border-color: gold;
-  box-shadow: 0 0 5px gold;
+  border-color: #ffbfa0;
+  box-shadow: 0 0 5px #ffbfa0;
 }
 
 .auth-button {
@@ -64,7 +63,7 @@
 
 /* Link zmiany trybu */
 .auth-switch {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   color: var(--text-muted);
   font-size: 0.95rem;
   text-decoration: underline;
@@ -127,4 +126,11 @@
   --text-muted: #666;
   --social-bg: #f9f9f9;
   color: #000;
+}
+@media (max-width: 768px) {
+  .auth-form-box {
+    background-color: transparent;
+    box-shadow: none;
+
+  }
 }
