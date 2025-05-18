@@ -3,9 +3,8 @@ import './ClothesGrid.css';
 import productsDATA from '../../productsData';
 import { useNavigate } from 'react-router-dom';
 
-const ClothesGrid = () => {
+const ClothesGrid = ({products}) => {
   const navigate = useNavigate();
-  const products = productsDATA.products.filter(p => p.type === 'clothing' || p.type === 't-shirt');
 
   return (
     <div className="clothes-grid">

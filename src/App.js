@@ -16,6 +16,10 @@ import Offer from './pages/offer/Offer';
 import ProductDetails from './pages/productDetails/ProductDetails';
 import ShoesPage from './pages/shoes/ShoesPage';
 import Clothes from './pages/clothes/Clothes';
+import AuthRedirect from './components/routes/AuthRedirect';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // styl
+import CartPage from './pages/cart/CartPage';
 
 function PrivateRoute({ children }) {
   const { user } = useAuth();
@@ -36,24 +40,40 @@ function App() {
                 <Route path="/clothes" element={<Clothes />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/auth" element={<Auth />} />
-                
-                {/* Nowe trasy: */}
+                <Route path="/auth" element={
+                  <AuthRedirect>
+                     <Auth />
+                  </AuthRedirect>
+                 } />
                 <Route path="/user-products" element={
                   <PrivateRoute>
                     <UserProducts />
+                  </PrivateRoute>
+                } />
+                <Route path="/cart" element={
+                  <PrivateRoute>
+                    <CartPage />
                   </PrivateRoute>
                 } />
                 <Route path="/all-products" element={<AllProducts />} />
                 <Route path="/offer" element={<Offer />} />
                 <Route path="/shoes" element={<ShoesPage />} />
                 <Route path="/product/:id" element={<ProductDetails />} />
-                {/* <Route path="/offer/:id" element={<Offer />} /> */}
         
               </Routes>
             </main>
             <Footer />
           </div>
+
+            <ToastContainer 
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            closeOnClick
+            pauseOnHover
+            theme="colored"
+          />
+
         </ThemeProvider>
       </AuthProvider>
     </BrowserRouter>

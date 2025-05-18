@@ -2,85 +2,82 @@ import { useState, useEffect } from "react";
 import { db, auth } from "./firebase";
 import {
   collection,
-  addDoc,
   getDocs,
-  deleteDoc,
-  updateDoc,
-  doc,
   query,
   where,
-  serverTimestamp,
 } from "firebase/firestore";
+import productsDATA from './productsData';
+import ClothesGrid from "./clothes/clothesGrid/ClothesGrid";
+import "./UserProducts.css";
 
 export default function UserProducts() {
-  const [products, setProducts] = useState([]);
-  const [newProduct, setNewProduct] = useState({ name: "", description: "", price: "" });
-
-  const user = auth.currentUser;
-
-  const loadProducts = async () => {
-    if (!user) return;
-    const q = query(collection(db, "products"), where("owner", "==", user.uid));
-    const querySnapshot = await getDocs(q);
-    const data = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-    setProducts(data);
-  };
-
-  const addProduct = async () => {
-    if (!user) return;
-    await addDoc(collection(db, "products"), {
-      ...newProduct,
-      owner: user.uid,
-      createdAt: serverTimestamp(),
-    });
-    setNewProduct({ name: "", description: "", price: "" });
-    loadProducts();
-  };
-
-  const deleteProduct = async (id) => {
-    await deleteDoc(doc(db, "products", id));
-    loadProducts();
-  };
-
-  const updateProduct = async (id, updatedFields) => {
-    await updateDoc(doc(db, "products", id), updatedFields);
-    loadProducts();
-  };
+  const [favoriteProducts, setFavoriteProducts] = useState([]);
+  const [cartProducts, setCartProducts] = useState([]);
 
   useEffect(() => {
-    loadProducts();
-  }, [user]);
+    const fetchUserProducts = async () => {
+      const user = auth.currentUser;
+      if (!user) return;
+
+      try {
+        // Favourites
+        const favQuery = query(
+          collection(db, "favorites"),
+          where("userId", "==", user.uid)
+        );
+        const favSnap = await getDocs(favQuery);
+        const favIds = favSnap.docs.map(doc => doc.data().productId);
+        const favMatches = productsDATA.products.filter(product =>
+          favIds.includes(product.id)
+        );
+        setFavoriteProducts(favMatches);
+
+        // Cart
+        const cartQuery = query(
+          collection(db, "cart"),
+          where("userId", "==", user.uid)
+        );
+        const cartSnap = await getDocs(cartQuery);
+        const cartIds = cartSnap.docs.map(doc => doc.data().productId);
+        const cartMatches = productsDATA.products.filter(product =>
+          cartIds.includes(product.id)
+        );
+        setCartProducts(cartMatches);
+
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserProducts();
+  }, []);
+
+  if (!auth.currentUser) {
+    return <p style={{ padding: "2rem" }}>Please log in to view your cart and favorites.</p>;
+  }
 
   return (
-    <div>
-      <h2>Twoje produkty</h2>
-      <input
-        placeholder="Nazwa"
-        value={newProduct.name}
-        onChange={(e) => setNewProduct((p) => ({ ...p, name: e.target.value }))}
-      />
-      <input
-        placeholder="Opis"
-        value={newProduct.description}
-        onChange={(e) => setNewProduct((p) => ({ ...p, description: e.target.value }))}
-      />
-      <input
-        placeholder="Cena"
-        type="number"
-        value={newProduct.price}
-        onChange={(e) => setNewProduct((p) => ({ ...p, price: e.target.value }))}
-      />
-      <button onClick={addProduct}>Dodaj</button>
-
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <strong>{product.name}</strong>: {product.description} — {product.price} zł
-            <button onClick={() => deleteProduct(product.id)}>Usuń</button>
-            {/* Tu możesz dodać przycisk edycji */}
-          </li>
-        ))}
-      </ul>
+    <div className="favorites-page">
+      <div>
+        <h4>Your Favorite Products</h4>
+        {favoriteProducts.length === 0 ? (
+          <p>You don't have any favorite products yet.</p>
+        ) : (
+          <div className="favorites-grid">
+            <ClothesGrid products={favoriteProducts} />
+          </div>
+        )}
+      </div>
+      <div>
+        <h4>Your Cart</h4>
+        {cartProducts.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+          <div className="favorites-grid">
+            <ClothesGrid products={cartProducts} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

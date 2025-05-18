@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
-import { FaShoppingCart, FaUser, FaBars, FaTimes, FaArrowRight, FaSignOutAlt } from 'react-icons/fa';
-import { auth } from '../firebase';  // Zakładając, że masz odpowiednią konfigurację firebase
-import { signOut } from 'firebase/auth'; // Funkcja do wylogowania
-import "./Navbar.css";
+import {
+  FaShoppingCart,
+  FaUser,
+  FaBars,
+  FaTimes,
+  FaArrowRight,
+  FaSignOutAlt,
+  FaHeart
+} from 'react-icons/fa';
+import { auth } from '../firebase';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import './Navbar.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CTAButton from '../button/Button';
@@ -14,7 +22,25 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [user, setUser] = useState(null);  // Stan dla użytkownika
+  const [user, setUser] = useState(null);
+
+  // 🔗 Linki
+  const commonLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About' },
+    { to: '/offer', label: 'Offer' },
+    { to: '/all-products', label: 'Products' },
+    { to: '/contact', label: 'Contact' },
+  ];
+
+  const userLinks = [
+    { to: '/user-products', label: 'My Products' },
+    { to: '/cart', label: 'Cart' },
+  ];
+
+  const guestLinks = [
+    // { to: '/auth', label: 'Account' },
+  ];
 
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
@@ -31,7 +57,7 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    handleResize(); // Ustaw początkową wartość
+    handleResize();
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
@@ -42,59 +68,60 @@ const Navbar = () => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  // Sprawdzenie, czy użytkownik jest zalogowany
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
     });
-
-    // Cleanup na odpięcie listenera
     return () => unsubscribe();
   }, []);
 
   const handleSignOut = async () => {
     try {
-      await signOut(auth);  // Wylogowanie
-      setUser(null);  // Aktualizacja stanu użytkownika
+      await signOut(auth);
+      setUser(null);
     } catch (error) {
-      console.error("Error signing out: ", error);
+      console.error('Error signing out: ', error);
     }
   };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div>
-        <NavLink to="/" className="nav-logo">Logo</NavLink>
+        {/* <NavLink to="/" className="nav-logo">Logo</NavLink> */}
+        {user ? <p> User</p> : <p>Guest</p>}
       </div>
 
       {!isMobile && (
         <div className="nav-links">
-          <NavLink to="/" end>Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/all-products">All Products</NavLink>
-          <NavLink to="/offer">Offer</NavLink>
-          {/* <NavLink to="/user-products">User</NavLink> */}
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/new">New</NavLink>
+          {[...commonLinks].map(({ to, label }) => (
+            <NavLink key={to} to={to}>{label}</NavLink>
+          ))}
         </div>
       )}
 
       <div className="navbar-right-side">
         <div className="nav-theme-toggle-container">
-          <button onClick={toggleTheme} className={`theme-toggle ${theme === 'light' ? 'light' : 'dark'}`}>
+          <button
+            onClick={toggleTheme}
+            className={`theme-toggle ${theme === 'light' ? 'light' : 'dark'}`}
+          >
             <div className="toggle-switch"></div>
           </button>
         </div>
+
+        <NavLink to="/user-products" className="nav-icon">
+          <FaHeart />
+        </NavLink>
+
         <NavLink to="/cart" className="nav-icon">
           <FaShoppingCart />
         </NavLink>
+
         {user ? (
-          // Jeśli użytkownik jest zalogowany, wyświetlamy przycisk do wylogowania
-          <button onClick={handleSignOut} className="nav-icon">
+          <NavLink onClick={handleSignOut} to="/" className="nav-icon">
             <FaSignOutAlt />
-          </button>
+          </NavLink>
         ) : (
-          // Jeśli użytkownik nie jest zalogowany, wyświetlamy ikonę logowania
           <NavLink to="/auth" className="nav-icon">
             <FaUser />
           </NavLink>
@@ -102,9 +129,12 @@ const Navbar = () => {
       </div>
 
       {isMobile && (
-        <div className='nav-mobile-right'>
+        <div className="nav-mobile-right">
           <div className="nav-theme-toggle-container">
-            <button onClick={toggleTheme} className={`theme-toggle ${theme === 'light' ? 'light' : 'dark'}`}>
+            <button
+              onClick={toggleTheme}
+              className={`theme-toggle ${theme === 'light' ? 'light' : 'dark'}`}
+            >
               <div className="toggle-switch"></div>
             </button>
           </div>
@@ -115,61 +145,43 @@ const Navbar = () => {
 
           <div className={`mobile-nav-links ${isMenuOpen ? 'slide-in' : 'slide-out'}`}>
             <div className="menu-close-box">
-              <button className="menu-toggle-open" onClick={toggleMenu} aria-label="Toggle menu" >
+              <button className="menu-toggle-open" onClick={toggleMenu} aria-label="Close menu">
                 <FaTimes />
               </button>
             </div>
 
-            <NavLink to="/" end onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>Home</div>
-              <FaArrowRight className="arrow-icon" />
-            </NavLink>
+            {[...commonLinks, ...(user ? userLinks : guestLinks)].map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                onClick={() => setIsMenuOpen(false)}
+                className="mobile-link"
+              >
+                <div className="h3-nav">{label}</div>
+                <FaArrowRight className="arrow-icon" />
+              </NavLink>
+              
+            ))}
 
-            <NavLink to="/about" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>About</div>
-              <FaArrowRight className="arrow-icon" />
-            </NavLink>
-
-            <NavLink to="/user-products" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>User products</div>
-              <FaArrowRight className="arrow-icon" />
-            </NavLink>
-
-            <NavLink to="/all-products" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>All products</div>
-              <FaArrowRight className="arrow-icon" />
-            </NavLink>
-
-            <NavLink to="/offer" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>Offer</div>
-              <FaArrowRight className="arrow-icon" />
-            </NavLink>
-
-            <NavLink to="/shoes" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>Shoes</div>
-              <FaArrowRight className="arrow-icon" />
-            </NavLink>
-
-
-            <NavLink to="/auth" onClick={() => setIsMenuOpen(false)} className="mobile-link">
-              <div className='h3-nav'>Account</div>
-              <FaArrowRight className="arrow-icon" />
-            </NavLink>
-
-            {user && (
-              <div className="mobile-link" onClick={handleSignOut}>
-                <div className='h3-nav'>Log out</div>
-                <FaSignOutAlt className="arrow-icon" />
-              </div>
-            )}
+   
 
             <div className="nav-mobile-text-box">
               <span className="nav-mobile-text">Take the step that sets you apart.</span>
             </div>
 
+              {user && (
+              <button className='hero-video-cta-button' onClick={handleSignOut}>
+                <div className="h3-nav">Log out</div>
+              </button>
+            )}
+
+              {!user && (
             <CTAButton to="/auth" variant="gold">
               Get Started
             </CTAButton>
+            )}
+
+
           </div>
         </div>
       )}
