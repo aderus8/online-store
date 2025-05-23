@@ -13,6 +13,7 @@ import "./UserProducts.css";
 export default function UserProducts() {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
   const [cartProducts, setCartProducts] = useState([]);
+  const [loading, setLoading] = useState(true); // ✅ Dodajemy stan ładowania
 
   useEffect(() => {
     const fetchUserProducts = async () => {
@@ -20,6 +21,9 @@ export default function UserProducts() {
       if (!user) return;
 
       try {
+        // Rozpocznij ładowanie
+        setLoading(true);
+
         // Favourites
         const favQuery = query(
           collection(db, "favorites"),
@@ -43,9 +47,11 @@ export default function UserProducts() {
           cartIds.includes(product.id)
         );
         setCartProducts(cartMatches);
-
       } catch (error) {
         console.error("Error fetching user data:", error);
+      } finally {
+        // Zakończ ładowanie
+        setLoading(false);
       }
     };
 
@@ -54,6 +60,10 @@ export default function UserProducts() {
 
   if (!auth.currentUser) {
     return <p style={{ padding: "2rem" }}>Please log in to view your cart and favorites.</p>;
+  }
+
+  if (loading) {
+    return <p style={{ padding: "2rem" }} className="favorites-page mt">Loading your products...</p>; // ✅ Można tu dodać spinner
   }
 
   return (

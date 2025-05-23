@@ -9,9 +9,9 @@ const HeroSection = () => {
   }, []);
 
   const handleClick = () => {
-    console.log("CTA clicked!");
-    // możesz tu np. scrollować do sekcji lub nawigować
-  };
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 
   return (
     <section className="hero-section">

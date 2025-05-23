@@ -4,7 +4,7 @@
 }
 .brand-slider-wrapper {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0;
   padding: 60px 20px;
   text-align: center;
   background: linear-gradient(135deg, #fffdfa, #fdf3f0);

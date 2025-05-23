@@ -3,6 +3,8 @@
 }
 .home-container{
     margin: 0;
+      background: linear-gradient(135deg, #fffdfa, #fdf3f0);
+
 }
 .heroes-container{
  display: flex;

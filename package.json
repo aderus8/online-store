@@ -12,6 +12,7 @@
     "react-router-dom": "^6.14.1",
     "react-scripts": "^5.0.1",
     "react-toastify": "^11.0.5",
+    "spinner": "^0.3.4",
     "swiper": "^11.2.6"
   },
   "scripts": {

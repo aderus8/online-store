@@ -58,7 +58,7 @@ export default function CartPage() {
     return <p style={{ padding: "2rem" }}>You must be logged in to view your cart.</p>;
   }
 
-  if (loading) return  <p>Loading cart...</p>;
+  if (loading) return  <p className="cart-page mt"> Loading cart...</p>;
   return (
     <div className="cart-page">
       <h2>Your Shopping Cart</h2>

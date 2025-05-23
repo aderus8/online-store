@@ -154,7 +154,7 @@ const ProductDetails = () => {
           <p><strong>Description:</strong> {product.description}</p>
           <p><strong>Brand:</strong> {product.company}</p>
           <p><strong>Color:</strong> {product.color}</p>
-          <p><strong>Size:</strong> {product.size}</p>
+          {/* <p><strong>Size:</strong> {product.size}</p> */}
 
           {product.url && (
             <p>
@@ -164,7 +164,7 @@ const ProductDetails = () => {
             </p>
           )}
 
-          <div className="size-selector">
+          {/* <div className="size-selector">
             <label htmlFor="size">Choose size:</label>
             <select id="size" className="size-dropdown">
               <option value="">-- choose --</option>
@@ -172,7 +172,7 @@ const ProductDetails = () => {
                 <option key={size} value={size}>{size}</option>
               ))}
             </select>
-          </div>
+          </div> */}
 
           <div className="product-actions">
             <button className={`add-to-cart-btn ${isInCart ? "in-cart" : ""}`} onClick={handleToggleCart}>

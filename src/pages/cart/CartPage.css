@@ -16,6 +16,12 @@
   padding: 0.75rem;
   text-align: center;
 }
+body.dark .cart-table th {
+    color: rgb(152, 152, 152);
+}
+body.dark .cart-table th {
+    color: rgb(37, 34, 34);
+}
 
 .cart-table th {
   background-color: #f5f5f5;
