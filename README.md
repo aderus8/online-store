@@ -2,12 +2,12 @@ Online Store — E-commerce Frontend Project
 
 🔗  https://online-store-one-peach.vercel.app/
 
-** Description
+# Description
 
 This is a responsive, modern e-commerce frontend application built with React.js and JavaScript, designed to showcase products, support user interaction, and simulate a shopping experience.
 
 
-** Key functionalities include:
+# Key functionalities include:
 
 Product listing with categories, filters, and detailed product pages
 
@@ -23,7 +23,7 @@ Hosted on Vercel
 
 
 
-** Technologies Used
+# Technologies Used
 
 React.js
 
@@ -45,7 +45,7 @@ Vercel for deployment
 
 
 
-** Notes
+# Notes
 
 This is a frontend-focused project, primarily built to demonstrate UI/UX skills, component structure, state management, and Firebase integration.
 No payment integration or backend order processing (focus is on interface and client-side logic).
