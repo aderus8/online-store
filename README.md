@@ -1,4 +1,4 @@
-Online Store — E-commerce Frontend Project
+# Online Store — E-commerce Frontend Project
 
 🔗  https://online-store-one-peach.vercel.app/
 
