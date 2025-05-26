@@ -10,7 +10,7 @@ Key functionalities include:
 
 Product listing with categories, filters, and detailed product pages
 Favorites and  cart system (with Firebase integration)
-Firebase Authentication for login/logout and user-specific data (favorites & cart)     
+Firebase Authentication for login/logout and user-specific data (favorites & cart) 
 Fully responsive UI with AOS animations, Swiper sliders, and modern design
 Routing and navigation with React Router
 Hosted on Vercel
