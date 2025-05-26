@@ -45,7 +45,7 @@ Vercel for deployment
 
 
 
-# Notes
+## Notes
 
 This is a frontend-focused project, primarily built to demonstrate UI/UX skills, component structure, state management, and Firebase integration.
 No payment integration or backend order processing (focus is on interface and client-side logic).
