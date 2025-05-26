@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import productsDATA from '../../components/productsData';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFilter, FaTimes } from 'react-icons/fa';
-import "./AllProducts.css";
+import './AllProducts.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ProductCard from '../../components/product/productCard/ProductCard';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const AllProducts = () => {
   const [showFilters, setShowFilters] = useState(true);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -28,9 +29,10 @@ const AllProducts = () => {
   const [allGenders, setAllGenders] = useState([]);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
   const toggleFilters = () => setShowFilters(prev => !prev);
   const toggleMobileFilters = () => setShowMobileFilters(prev => !prev);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -62,20 +64,41 @@ const AllProducts = () => {
       setAllCompanies([...new Set(allProducts.map(p => p.company))]);
       setAllColors([...new Set(allProducts.map(p => p.color))]);
       setAllSizes([...new Set(allProducts.map(p => p.size))]);
-      setAllCategories([...new Set(allProducts.map(p => p.type))]); // clothes, shoes
-      setAllGenders([...new Set(allProducts.map(p => p.category))]); // men, women, kids
+      setAllCategories([...new Set(allProducts.map(p => p.type))]);
+      setAllGenders([...new Set(allProducts.map(p => p.category))]);
     }
   }, []);
 
-  const handleCheckboxChange = (setter, value) => {
-    setter(prev =>
-      prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-    );
-  };
+  useEffect(() => {
+    const pathParts = location.pathname.split('/').filter(Boolean);
+    const company = [];
+    const category = [];
+    const color = [];
+    const size = [];
+    const gender = [];
+    let price = '';
 
-  const handlePriceChange = (e) => {
-    setSelectedPrice(e.target.value);
-  };
+    pathParts.forEach(part => {
+      const [key, val] = part.split('-');
+      if (key === 'company') company.push(val);
+      if (key === 'category') category.push(val);
+      if (key === 'color') color.push(val);
+      if (key === 'size') size.push(val);
+      if (key === 'gender') gender.push(val);
+      if (key === 'price') price = val;
+    });
+
+    setSelectedCompanies(company);
+    setSelectedCategories(category);
+    setSelectedColors(color);
+    setSelectedSizes(size);
+    setSelectedGenders(gender);
+    setSelectedPrice(price);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    applyFilters();
+  }, [selectedCompanies, selectedCategories, selectedColors, selectedSizes, selectedGenders, selectedPrice]);
 
   const applyFilters = () => {
     let filtered = [...products];
@@ -83,23 +106,18 @@ const AllProducts = () => {
     if (selectedCompanies.length > 0) {
       filtered = filtered.filter(product => selectedCompanies.includes(product.company));
     }
-
     if (selectedCategories.length > 0) {
       filtered = filtered.filter(product => selectedCategories.includes(product.type));
     }
-
     if (selectedGenders.length > 0) {
       filtered = filtered.filter(product => selectedGenders.includes(product.category));
     }
-
     if (selectedColors.length > 0) {
       filtered = filtered.filter(product => selectedColors.includes(product.color));
     }
-
     if (selectedSizes.length > 0) {
       filtered = filtered.filter(product => selectedSizes.includes(product.size));
     }
-
     if (selectedPrice) {
       filtered = filtered.filter(product => {
         const price = parseFloat(product.price);
@@ -113,6 +131,53 @@ const AllProducts = () => {
     setFilteredProducts(filtered);
   };
 
+  const updateUrl = (changedKey, updatedValues) => {
+    const filters = {
+      company: selectedCompanies,
+      category: selectedCategories,
+      color: selectedColors,
+      size: selectedSizes,
+      gender: selectedGenders,
+      price: selectedPrice ? [selectedPrice] : [],
+      [changedKey]: updatedValues
+    };
+
+    let newUrl = '/all-products';
+    Object.entries(filters).forEach(([key, values]) => {
+      values.forEach(val => {
+        newUrl += `/${key}-${val}`;
+      });
+    });
+
+    navigate(newUrl);
+  };
+
+  const handleCheckboxChange = (setter, value, filterType) => {
+    setter(prev => {
+      const updated = prev.includes(value)
+        ? prev.filter(item => item !== value)
+        : [...prev, value];
+      updateUrl(filterType, updated);
+      return updated;
+    });
+  };
+
+  const handlePriceChange = (e) => {
+    const value = e.target.value;
+    setSelectedPrice(value);
+    updateUrl('price', value ? [value] : []);
+  };
+
+  const clearFilters = () => {
+    setSelectedCompanies([]);
+    setSelectedCategories([]);
+    setSelectedPrice('');
+    setSelectedColors([]);
+    setSelectedSizes([]);
+    setSelectedGenders([]);
+    navigate('/all-products');
+  };
+
   const renderFilters = () => (
     <>
       <div className="filter-group">
@@ -122,9 +187,9 @@ const AllProducts = () => {
             <input
               type="checkbox"
               value={company}
-              onChange={() => handleCheckboxChange(setSelectedCompanies, company)}
+              checked={selectedCompanies.includes(company)}
+              onChange={() => handleCheckboxChange(setSelectedCompanies, company, 'company')}
             />
-            <span className="custom-checkbox-box"></span>
             {company}
           </label>
         ))}
@@ -137,7 +202,8 @@ const AllProducts = () => {
             <input
               type="checkbox"
               value={category}
-              onChange={() => handleCheckboxChange(setSelectedCategories, category)}
+              checked={selectedCategories.includes(category)}
+              onChange={() => handleCheckboxChange(setSelectedCategories, category, 'category')}
             />
             {category}
           </label>
@@ -151,7 +217,8 @@ const AllProducts = () => {
             <input
               type="checkbox"
               value={gender}
-              onChange={() => handleCheckboxChange(setSelectedGenders, gender)}
+              checked={selectedGenders.includes(gender)}
+              onChange={() => handleCheckboxChange(setSelectedGenders, gender, 'gender')}
             />
             {gender}
           </label>
@@ -165,23 +232,10 @@ const AllProducts = () => {
             <input
               type="checkbox"
               value={color}
-              onChange={() => handleCheckboxChange(setSelectedColors, color)}
+              checked={selectedColors.includes(color)}
+              onChange={() => handleCheckboxChange(setSelectedColors, color, 'color')}
             />
             {color}
-          </label>
-        ))}
-      </div>
-
-      <div className="filter-group">
-        <h6>Size</h6>
-        {allSizes.map(size => (
-          <label key={size}>
-            <input
-              type="checkbox"
-              value={size}
-              onChange={() => handleCheckboxChange(setSelectedSizes, size)}
-            />
-            {size}
           </label>
         ))}
       </div>
@@ -194,6 +248,7 @@ const AllProducts = () => {
               type="radio"
               name="price"
               value={range}
+              checked={selectedPrice === range}
               onChange={handlePriceChange}
             />
             {range === '0-100' ? 'up to 100 zł' : range === '100-200' ? '100–200 zł' : 'over 200 zł'}
@@ -201,19 +256,9 @@ const AllProducts = () => {
         ))}
       </div>
 
-      <button className="apply-filters-button" onClick={applyFilters}>Apply</button>
       <button className="apply-filters-button clear" onClick={clearFilters}>Clear</button>
-
     </>
   );
-
-  const clearFilters = () => {
-  setSelectedCompanies([]);
-  setSelectedCategories([]);
-  setSelectedPrice('');
-  setFilteredProducts(products); // Resetujemy filtry do pełnej listy produktów
-};
-
 
   return (
     <div className='offer-page'>

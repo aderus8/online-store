@@ -1,16 +1,16 @@
 .about-hero-section {
     height: 70vh;
     /* background-image: url("https://techcloudltd.com/blog/wp-content/uploads/2023/08/Proper-studio-lighting-setup-Tech-Cloud-Ltd.webp"); */
-    background-size: cover; /* Zamiast contain */
+    background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
     display: flex;
-    align-items: flex-end; /* tekst bliżej dołu */
+    align-items: flex-end; 
     justify-content: center;
     text-align: center;
-    padding-bottom: 4rem; /* margines dla tekstu */
+    padding-bottom: 4rem;
   }
   
   .about-hero-overlay {

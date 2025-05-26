@@ -34,7 +34,6 @@ body.dark {
   padding: 10px 15px;
 }
 
-/* Nagłówki */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: bold;
@@ -65,7 +64,6 @@ h6 {
   font-size: clamp(1rem, 2.5vw, 1.6rem);
 }
 
-/* Paragrafy */
 p {
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   /* line-height: 1.6; */
@@ -74,7 +72,6 @@ p {
   letter-spacing: 1px;
 }
 
-/* Span i Small */
 span {
   font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
@@ -83,7 +80,6 @@ small {
   font-size: 0.8rem;
 }
 
-/* Responsywność na urządzenia mobilne */
 @media screen and (max-width: 768px) {
   h1 {
     font-size: clamp(1.5rem, 6vw, 2.5rem);

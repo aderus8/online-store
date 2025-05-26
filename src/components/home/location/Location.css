@@ -30,19 +30,12 @@
   flex: 1 1 300px;
   text-align: center;
   color: #4a4a4a;
-
-  /* font-size: 1.1rem; */
-  /* color: #374151; */
-  /* line-height: 1.6; */
 }
 
 .location-text h6 {
   margin-top: 20px;
-  /* font-size: 1.5rem; */
-  /* color: #2049ba; */
   margin-bottom: 40px;
   color: #374151;
-
 }
 
 .location-text strong {

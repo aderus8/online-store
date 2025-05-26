@@ -1,18 +1,17 @@
-// components/ProductSlider.jsx
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './ProductSlider.css'; // opcjonalny własny styl
+import './ProductSlider.css'; 
 import productsDATA from '../../productsData';
 import ProductCard from '../../product/productCard/ProductCard';
 
 const ProductSlider = ({productType}) => {
   const products = productsDATA.products
   .filter(product => product.type === productType)
-  .slice(0, 10); // wybrane 10 najnowszych
+  .slice(0, 10);
 
   
 

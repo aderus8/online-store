@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LookingAheadHero.css';
-import bgImage from '../../../assets/styles/store4.jpg'; // Upewnij się, że masz ten plik
+import bgImage from '../../../assets/styles/store4.jpg'; 
 
 const LookingAheadHero = () => {
   const navigate = useNavigate();

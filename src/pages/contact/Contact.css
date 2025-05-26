@@ -1,13 +1,10 @@
-/* Ogólny kontener */
 .contact-container {
     font-family: 'Satoshi', sans-serif;
-    /* background: linear-gradient(to bottom right, #222, #111); */
     padding: 2rem 2rem;
     animation: fadeInUp 1.2s ease-out;
     margin-top: 60px;
 }
 
-/* Animacja wchodzenia z dołu (fade-in-up) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -20,12 +17,11 @@
 }
 
 
-/* Sekcja formularza kontaktowego */
 .contact-form {
     background: linear-gradient(to bottom right, #222, #111);
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgb(0, 0, 0);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.55);
     max-width: 550px;
     margin: 0 auto;
     font-family: 'Satoshi', sans-serif;
@@ -34,7 +30,7 @@
 }
 body.light .contact-form{
     background: linear-gradient(to right, #ffffffbe, #ffffff, #ffffffb4);
-    box-shadow: 0 5px 15px rgb(193, 193, 193);
+    box-shadow: 0 5px 15px rgba(193, 193, 193, 0.336);
 
 }
 @keyframes slideIn {

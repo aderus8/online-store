@@ -2,14 +2,13 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* ułatwia układ w pionie */
+    flex-direction: column; 
 }
 
-/* Parallax tło na górze strony */
 .shoes-page-hero {
     position: relative;
     width: 100%;
-    height: 600px; /* zamiast 50vh – stała wysokość */
+    height: 600px; 
     background-attachment: fixed;
     background-size: cover;
     background-position: center;

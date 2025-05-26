@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './About.css'; // Create this file for styling
+import './About.css'; 
 import AboutHero from '../../components/about/heroAbout/AboutHero';
-import photo1 from '../../assets/styles/store1.jpg'; // Przykładowe lokalne zdjęcie
-import photo2 from '../../assets/styles/store2.jpg'; // Przykładowe lokalne zdjęcie
-import photo3 from '../../assets/styles/store3.jpg'; // Przykładowe lokalne zdjęcie
+import photo1 from '../../assets/styles/store1.jpg'; 
+import photo2 from '../../assets/styles/store2.jpg'; 
+import photo3 from '../../assets/styles/store3.jpg'; 
 import LookingAheadHero from '../../components/about/heroLookingAhead/LookingAheadHero';
 
 const About = () => {
@@ -17,8 +17,6 @@ const About = () => {
     <div>
       <AboutHero />
       <div className="about-container">
-        
-        {/* Sekcja 1 */}
         <section className="about-hero" data-aos="fade-up">
           <div className='section-div'>
             <div className='section-div-text'>
@@ -36,7 +34,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Sekcja 2 */}
         <section className="about-values" data-aos="fade-up" data-aos-delay="200">
           <div className='section-div'>
             <div className="about-image-container" style={{ backgroundImage: `url(${photo2})` }}>
@@ -53,7 +50,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Sekcja 3 */}
         <section className="about-mission" data-aos="fade-up" data-aos-delay="300">
           <div className='section-div'>
             <div className='section-div-text'>
@@ -70,16 +66,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
-
-        {/* Sekcja 4
-        <section className="about-vision" data-aos="fade-up" data-aos-delay="400">
-          <h3>Looking Ahead</h3>
-          <p>
-            We're committed to sustainability, innovation, and expanding our community globally.
-            UrbanStep isn’t just a brand — it’s a movement. And you're part of it.
-          </p>
-        </section> */}
       </div>
       <LookingAheadHero/>
 

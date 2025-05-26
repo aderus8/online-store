@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ClothesHero.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // zaimportuj style AOS
+import 'aos/dist/aos.css';
 
 const ClothesHero = ({products}) => {
 
@@ -15,9 +15,7 @@ const ClothesHero = ({products}) => {
 
   return (
     <div class="clothes-hero">
-
       <div class="clothes-hero-photos" data-aos="fade-up">
-
         {products.map((product, index) => (
           <a
           key={product.id}
@@ -30,31 +28,8 @@ const ClothesHero = ({products}) => {
             <div className="clothes-photo-text">{product.name}</div>
           </a>
                 ))}
-        {/* <div class="clothes-hero-photo chf1">
-          <div class="clothes-photo-text">Fresh Drops</div>
-        </div>
-        <div class="clothes-hero-photo chf2">
-          <div class="clothes-photo-text">Street Style</div>
-        </div>
-        <div class="clothes-hero-photo chf3">
-          <div class="clothes-photo-text">Runway Ready</div>
-        </div>
-        <div class="clothes-hero-photo chf3 last">
-          <div class="clothes-photo-text">Runway Ready</div>
-        </div>
-        <div class="clothes-hero-photo chf3 last">
-          <div class="clothes-photo-text">Runway Ready</div>
-        </div> */}
-
       </div>
-
-
-
-
     </div>
-
-
-
   );
 };
 

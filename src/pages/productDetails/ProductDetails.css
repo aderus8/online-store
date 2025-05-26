@@ -136,7 +136,6 @@ body.dark .product-details p {
   border-color: #111;
 }
 
-/* Slider: Related Products */
 .related-products-slider {
   padding: 40px 9%;
 }
@@ -195,7 +194,6 @@ body.dark .product-details p {
   margin-top: 80px;
 }
 
-/* Responsywność */
 @media screen and (max-width: 768px) {
   .product-details-container {
     flex-direction: column;

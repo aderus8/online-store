@@ -18,7 +18,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Przykładowe logowanie danych formularza
+    console.log(formData); 
   };
 
   return (
@@ -30,9 +30,7 @@ const Contact = () => {
 
       </section>
 
-   
-      {/* Druga sekcja z formularzem */}
-      <section className="contact-form">
+         <section className="contact-form">
         <form onSubmit={handleSubmit} className="form">
           <input
             type="text"
@@ -63,7 +61,6 @@ const Contact = () => {
       </form>
        </section>
 
-      {/* Trzecia sekcja z danymi kontaktowymi */}
       <section className="contact-info">
         <div className="contact-item">
           <FaPhone />
@@ -71,7 +68,7 @@ const Contact = () => {
         </div>
         <div className="contact-item">
           <FaEnvelope />
-          <p>kontakt@twojastrona.pl</p>
+          <p>contact@website.com</p>
         </div>
         <div className="contact-item">
           <FaMapMarkerAlt />

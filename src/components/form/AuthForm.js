@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";  // Zakładając, że masz odpowiednią konfigurację w firebase.js
+import { auth } from "../firebase/firebase"; 
 import { useTheme } from "../../context/ThemeContext";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './AuthForm.css';
-import { useNavigate } from 'react-router-dom'; // Do przekierowania użytkownika po udanym logowaniu
+import { useNavigate } from 'react-router-dom'; 
 
 export default function AuthForm() {
   const [email, setEmail] = useState("");
@@ -15,21 +15,19 @@ export default function AuthForm() {
   const [successMessage, setSuccessMessage] = useState(null);
   const { theme } = useTheme();
   const [isLogin, setIsLogin] = useState(true);
-  const navigate = useNavigate();  // Do przekierowania użytkownika
+  const navigate = useNavigate(); 
 
-  // Funkcja zmieniająca tryb logowania/rejestracji
   const handleToggle = () => {
     setIsLogin(!isLogin);
     setIsRegister(!isRegister);
-    setError(null);  // Resetowanie błędów, jeśli przechodzimy między loginem a rejestracją
-    setSuccessMessage(null);  // Resetowanie komunikatów sukcesu
+    setError(null);  
+    setSuccessMessage(null); 
   };
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
 
-  // Obsługuje zmianę tematów
   useEffect(() => {
     setTimeout(() => {
       AOS.refreshHard();
@@ -51,15 +49,13 @@ export default function AuthForm() {
 
     try {
       if (isRegister) {
-        // Rejestracja
         await createUserWithEmailAndPassword(auth, email, password);
         setSuccessMessage('Zarejestrowano pomyślnie!');
-        setTimeout(() => setSuccessMessage(null), 3000); // Usuwamy wiadomość po 3 sekundach
+        setTimeout(() => setSuccessMessage(null), 3000); 
       } else {
-        // Logowanie
         await signInWithEmailAndPassword(auth, email, password);
         setSuccessMessage('Zalogowano pomyślnie!');
-        setTimeout(() => setSuccessMessage(null), 3000); // Usuwamy wiadomość po 3 sekundach
+        setTimeout(() => setSuccessMessage(null), 3000); 
       }
     } catch (err) {
       setError(err.message);
@@ -73,7 +69,6 @@ export default function AuthForm() {
       data-aos-duration="800"
       data-aos-easing="ease-out-cubic"
     >
-      {/* <h2>{isLogin ? 'Login' : 'Sign Up'}</h2> */}
       <form onSubmit={handleSubmit} className="auth-form">
         <input
           type="email"

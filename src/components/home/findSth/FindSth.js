@@ -4,7 +4,6 @@ import sport from "../../../assets/styles/sport.jpg";
 import casual from "../../../assets/styles/casual.jpg";
 import elegant from "../../../assets/styles/elegant.avif";
 import shoes from "../../../assets/styles/shoes.jpg";
-import SectionHeader from '../../header/sectionHeader/SectionHeader';
 import CTAButton from '../../button/Button';
 
 const categories = [
@@ -30,7 +29,6 @@ const FindSomethingForYou = () => {
                             <div className="overlay">
                                 <span className="overlay-text">Discover</span>
                             </div>
-
                         </div>
                         <p>{cat.label}</p>
                     </div>
@@ -39,8 +37,6 @@ const FindSomethingForYou = () => {
             <div className="style-explore-more">
                 <h3>Can’t Decide?</h3>
                 <p>Explore all categories and discover our best-selling products in one place.</p>
-                {/* <button className="explore-all-btn">Explore All Products</button> */}
-                {/* <CTAButton variant='gold'>Explore All Products</CTAButton> */}
                 <CTAButton to='/all-products' variant='darkblue'>Explore All Products</CTAButton>
             </div>
         </div>

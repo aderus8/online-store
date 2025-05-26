@@ -28,7 +28,6 @@
   filter: grayscale(0%);
 }
 
-/* === Responsive Styling === */
 @media (max-width: 1024px) {
   .brand-slider-wrapper {
     padding: 40px 15px;

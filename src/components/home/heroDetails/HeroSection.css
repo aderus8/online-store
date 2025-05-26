@@ -39,21 +39,18 @@
     padding: 0.8rem 2rem;
     font-size: 1.1rem;
     font-weight: bold;
-    /* background: linear-gradient(145deg, #e8d9b0, #d2b48c, #a67c52); */
     background: linear-gradient(145deg, #ffe5b4, #ffcba4, #ffb07c);
     border: none;
     color: black;
     cursor: pointer;
     border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* display: inline-block; ← bardzo ważne */
   }
   
   .hero-video-cta-button:hover {
     background: linear-gradient(145deg, #ffcba4, #ffb07c, #feaa72);
     transform: translateX(10px) scale(1.1);
     box-shadow: 0 1px 2px #ffb07c;
-
   }
   
 

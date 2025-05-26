@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaShoppingCart, FaTruck, FaGift, FaCreditCard } from 'react-icons/fa'; // Importujemy ikony z React Icons
+import { FaShoppingCart, FaTruck, FaGift, FaCreditCard } from 'react-icons/fa'; 
 import './WhyUs.css';
 
 const WhyUs = () => {

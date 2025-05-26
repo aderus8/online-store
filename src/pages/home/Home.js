@@ -28,10 +28,10 @@ const Home = () => {
           </Hero>
         </Link>
       </div>
-      {/* <WhyUs /> */}
-      <BrandSlider />
 
       <FindSomethingForYou />
+
+      <BrandSlider />
 
       <TestimonialSlider />
       <Location />

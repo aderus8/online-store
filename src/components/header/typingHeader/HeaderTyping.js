@@ -4,7 +4,6 @@ import './HeaderTyping.css';
 const HeaderTyping = ({ title, subtitle }) => {
   return (
     <div className="header-container">
-      {/* Animacja dla tytułu */}
       <div className="typing-effect">
         {title.split("").map((char, i) => (
           <h2 key={i} style={{ animationDelay: `${i * 0.04}s` }}>
@@ -13,7 +12,6 @@ const HeaderTyping = ({ title, subtitle }) => {
         ))}
       </div>
       
-      {/* Animacja dla podtytułu */}
       {subtitle && (
         <p className="typing-subtitle">
           {subtitle.split("").map((char, i) => (

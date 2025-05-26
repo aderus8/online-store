@@ -1,6 +1,5 @@
 import React from 'react';
 import './ClothesGrid.css';
-import productsDATA from '../../productsData';
 import { useNavigate } from 'react-router-dom';
 
 const ClothesGrid = ({products}) => {

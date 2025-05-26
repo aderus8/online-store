@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import './HeroPhoto.css';
-import { useNavigate } from 'react-router-dom';
 
 const HeroShoesClothes = ({ backgroundImage, text }) => {
     const [isHovered, setIsHovered] = useState(false);
-    const navigate = useNavigate();
-
-
 
     return (
         <section 

@@ -11,7 +11,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider, useAuth } from './components/context/AuthContext';
 import './App.css';
 import AllProducts from './pages/allProducts/AllProducts';
-import UserProducts from './components/UserProduct';
+import UserProducts from './components/userProducts/UserProduct';
 import Offer from './pages/offer/Offer';
 import ProductDetails from './pages/productDetails/ProductDetails';
 import ShoesPage from './pages/shoes/ShoesPage';
@@ -56,7 +56,7 @@ function App() {
                     <CartPage />
                   </PrivateRoute>
                 } />
-                <Route path="/all-products" element={<AllProducts />} />
+                <Route path="/all-products/*" element={<AllProducts />} />
                 <Route path="/offer" element={<Offer />} />
                 <Route path="/shoes" element={<ShoesPage />} />
                 <Route path="/product/:id" element={<ProductDetails />} />

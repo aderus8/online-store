@@ -1,24 +1,23 @@
-// TrainerCardGroup.js
 import React from 'react';
 import './CardsGroup.css'
 import Card from '../Card';
 
-const CardsGroup = ({ trainers, onCardClick }) => {
-  if (!Array.isArray(trainers)) {
-    console.error('trainers is not an array:', trainers);
-    return null;  // Or render a fallback UI
+const CardsGroup = ({ cardsData: data, onCardClick }) => {
+  if (!Array.isArray(data)) {
+    console.error('is not an array:', data);
+    return null;  
   }
 
   return (
-    <div className="trainer-card-group">
-      {trainers.map((trainer) => (
+    <div className="data-card-group">
+      {data.map((d) => (
         <Card
-          key={trainer.id}  // Ensure trainer.id is unique
-          image={trainer.image}
-          name={trainer.name}
-          role={trainer.role}
-          description={trainer.description}
-          onClick={() => onCardClick(trainer)}
+          key={d.id}  
+          image={d.image}
+          name={d.name}
+          role={d.role}
+          description={d.description}
+          onClick={() => onCardClick(d)}
         />
       ))}
     </div>

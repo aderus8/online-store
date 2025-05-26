@@ -1,18 +1,17 @@
-// BrandSlider.jsx
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
-import "./BrandSlider.css"; // styl poniżej
-import adidas from "../../../assets/logos/adidas.svg"; // dostosuj ścieżkę
-import nike from "../../../assets/logos/nike.png"; // dostosuj ścieżkę
-import ck from "../../../assets/logos/ck.png"; // dostosuj ścieżkę
-import nb from "../../../assets/logos/nb.png"; // dostosuj ścieżkę
-import puma from "../../../assets/logos/puma.svg"; // dostosuj ścieżkę
-import reebok from "../../../assets/logos/reebook.svg"; // dostosuj ścieżkę
-import tommy from "../../../assets/logos/tommy.svg"; // dostosuj ścieżkę
-import zara from "../../../assets/logos/zara.png"; // dostosuj ścieżkę
+import "./BrandSlider.css";
+import adidas from "../../../assets/logos/adidas.svg"; 
+import nike from "../../../assets/logos/nike.png";
+import ck from "../../../assets/logos/ck.png"; 
+import nb from "../../../assets/logos/nb.png"; 
+import puma from "../../../assets/logos/puma.svg";
+import reebok from "../../../assets/logos/reebook.svg"; 
+import tommy from "../../../assets/logos/tommy.svg"; 
+import zara from "../../../assets/logos/zara.png"; 
 
 const brands = [
     { name: "Nike", logo: nike },
@@ -29,7 +28,6 @@ const BrandSlider = () => {
   return (
     <div className="slider-container">
     <div className="brand-slider-wrapper">
-      {/* <h2 className="brand-slider-title">Our brands</h2> */}
       <Swiper
         slidesPerView={5}
         spaceBetween={30}

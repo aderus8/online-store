@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
-import { db, auth } from "./firebase";
+import { db, auth } from "../firebase/firebase";
 import {
   collection,
   getDocs,
   query,
   where,
 } from "firebase/firestore";
-import productsDATA from './productsData';
-import ClothesGrid from "./clothes/clothesGrid/ClothesGrid";
+import productsDATA from '../productsData';
+import ClothesGrid from "../clothes/clothesGrid/ClothesGrid";
 import "./UserProducts.css";
 
 export default function UserProducts() {
   const [favoriteProducts, setFavoriteProducts] = useState([]);
   const [cartProducts, setCartProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // ✅ Dodajemy stan ładowania
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchUserProducts = async () => {
@@ -21,10 +21,8 @@ export default function UserProducts() {
       if (!user) return;
 
       try {
-        // Rozpocznij ładowanie
         setLoading(true);
 
-        // Favourites
         const favQuery = query(
           collection(db, "favorites"),
           where("userId", "==", user.uid)
@@ -50,7 +48,6 @@ export default function UserProducts() {
       } catch (error) {
         console.error("Error fetching user data:", error);
       } finally {
-        // Zakończ ładowanie
         setLoading(false);
       }
     };
@@ -63,7 +60,7 @@ export default function UserProducts() {
   }
 
   if (loading) {
-    return <p style={{ padding: "2rem" }} className="favorites-page mt">Loading your products...</p>; // ✅ Można tu dodać spinner
+    return <p style={{ padding: "2rem" }} className="favorites-page mt">Loading your products...</p>; 
   }
 
   return (

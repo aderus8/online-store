@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductCard.css'; // Opcjonalnie: stylowanie osobno
+import './ProductCard.css'; 
 
 const ProductCard = ({ name, price, company, image, onClick }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './OfferHero.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // zaimportuj style AOS
+import 'aos/dist/aos.css'; 
 
 const OfferHero = () => {
 

@@ -1,4 +1,3 @@
-// src/hooks/useFavoritesAndCart.js
 import { useState, useEffect } from "react";
 import { db, auth } from "../firebase";
 import {

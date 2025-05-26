@@ -5,7 +5,7 @@ import './ProductDetails.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { doc, addDoc, collection, serverTimestamp, query, where, getDocs, deleteDoc } from 'firebase/firestore';
-import { auth, db } from "./../../components/firebase"
+import { auth, db } from "../../components/firebase/firebase"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -61,15 +61,15 @@ const ProductDetails = () => {
         }
 
       } catch (err) {
-        console.error("Błąd przy sprawdzaniu statusów:", err);
-        toast.error("Wystąpił błąd przy pobieraniu statusów.");
+        console.error("Error checking statuses:", err);
+        toast.error("An error occurred while fetching statuses.");
       }
     };
 
     checkStatus();
   }, [product]);
 
-  if (!product) return <p style={{ padding: "2rem" }}>Produkt nie znaleziony.</p>;
+  if (!product) return <p style={{ padding: "2rem" }}>Product not found.</p>;
 
   product.availableSizes = ["S", "M", "L", "XL"];
 
@@ -83,14 +83,14 @@ const ProductDetails = () => {
 
   const handleToggleFavorite = async () => {
     const user = auth.currentUser;
-    if (!user) return toast.info("Musisz być zalogowany, aby dodać do ulubionych.");
+    if (!user) return toast.info("You must be logged in to add to favorites.");
 
     try {
       if (isFavorite && favoriteDocId) {
         await deleteDoc(doc(db, "favorites", favoriteDocId));
         setIsFavorite(false);
         setFavoriteDocId(null);
-        toast.success("Usunięto z ulubionych.");
+        toast.success("Removed from favorites.");
       } else {
         const docRef = await addDoc(collection(db, "favorites"), {
           userId: user.uid,
@@ -99,24 +99,24 @@ const ProductDetails = () => {
         });
         setIsFavorite(true);
         setFavoriteDocId(docRef.id);
-        toast.success("Dodano do ulubionych.");
+        toast.success("Added to favorites.");
       }
     } catch (error) {
-      console.error("Błąd zarządzania ulubionymi:", error);
-      toast.error("Wystąpił błąd przy aktualizacji ulubionych.");
+      console.error("Error managing favorites:", error);
+      toast.error("An error occurred while updating favorites.");
     }
   };
 
   const handleToggleCart = async () => {
     const user = auth.currentUser;
-    if (!user) return toast.info("Musisz być zalogowany, aby dodać do koszyka.");
+    if (!user) return toast.info("You must be logged in to add to cart.");
 
     try {
       if (isInCart && cartDocId) {
         await deleteDoc(doc(db, "cart", cartDocId));
         setIsInCart(false);
         setCartDocId(null);
-        toast.success("Usunięto z koszyka.");
+        toast.success("Removed from cart.");
       } else {
         const docRef = await addDoc(collection(db, "cart"), {
           userId: user.uid,
@@ -126,11 +126,11 @@ const ProductDetails = () => {
         });
         setIsInCart(true);
         setCartDocId(docRef.id);
-        toast.success("Dodano do koszyka.");
+        toast.success("Added to cart.");
       }
     } catch (error) {
-      console.error("Błąd zarządzania koszykiem:", error);
-      toast.error("Wystąpił błąd przy aktualizacji koszyka.");
+      console.error("Error managing cart:", error);
+      toast.error("An error occurred while updating the cart.");
     }
   };
 
@@ -154,7 +154,6 @@ const ProductDetails = () => {
           <p><strong>Description:</strong> {product.description}</p>
           <p><strong>Brand:</strong> {product.company}</p>
           <p><strong>Color:</strong> {product.color}</p>
-          {/* <p><strong>Size:</strong> {product.size}</p> */}
 
           {product.url && (
             <p>
@@ -164,22 +163,12 @@ const ProductDetails = () => {
             </p>
           )}
 
-          {/* <div className="size-selector">
-            <label htmlFor="size">Choose size:</label>
-            <select id="size" className="size-dropdown">
-              <option value="">-- choose --</option>
-              {product.availableSizes.map((size) => (
-                <option key={size} value={size}>{size}</option>
-              ))}
-            </select>
-          </div> */}
-
           <div className="product-actions">
             <button className={`add-to-cart-btn ${isInCart ? "in-cart" : ""}`} onClick={handleToggleCart}>
-              {isInCart ? "✓ W koszyku (kliknij, aby usunąć)" : "Dodaj do koszyka"}
+              {isInCart ? "✓ In Cart (click to remove)" : "Add to Cart"}
             </button>
             <button className="wishlist-btn" onClick={handleToggleFavorite}>
-              {isFavorite ? "♥ Ulubione (kliknij, aby usunąć)" : "♡ Dodaj do ulubionych"}
+              {isFavorite ? "♥ Favorite (click to remove)" : "♡ Add to Favorites"}
             </button>
           </div>
         </div>

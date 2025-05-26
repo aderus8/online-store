@@ -9,12 +9,9 @@ const Offer = () => {
 
     return (
         <div class="page-offer-container">
-            
             <OfferHero/>
             <div className='mt50'/>
-
             <NewArrivals/>
-
             <PromoGrid/>
         </div>
 

@@ -1,14 +1,11 @@
-/* Podstawowy kontener */
 .auth-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   padding: 3rem 1rem;
-  /* min-height: 100vh; */
 }
 
-/* Formularz */
 .auth-form-box {
   background: var(--box-bg);
   padding: 2rem;
@@ -25,7 +22,6 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* margin-top: 1.5rem; */
 }
 
 .auth-form input {
@@ -61,7 +57,6 @@
   transform: scale(1.05);
 }
 
-/* Link zmiany trybu */
 .auth-switch {
   margin-bottom: 1rem;
   color: var(--text-muted);
@@ -70,7 +65,6 @@
   cursor: pointer;
 }
 
-/* Social buttons */
 .auth-social-buttons {
   display: flex;
   flex-direction: column;
@@ -101,9 +95,7 @@
   transform: scale(1.03);
 }
 
-/* UWAGA: zamienione tryby */
 
-/* Tryb light → teraz CIEMNY */
 .dark-mode {
   --box-bg: #222;
   --box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
@@ -116,7 +108,6 @@
   color: #fff;
 }
 
-/* Tryb dark → teraz JASNY */
 .light-mode {
   --box-bg: #ffffff;
   --box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);

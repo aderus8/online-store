@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { collection, query, where, getDocs, deleteDoc, doc } from "firebase/firestore";
-import { db, auth } from "../../components/firebase";
+import { db, auth } from "../../components/firebase/firebase";
 import productsDATA from "../../components/productsData";
-import "./CartPage.css"; // Możesz dostosować stylizację
+import "./CartPage.css"; 
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState([]);
@@ -51,7 +51,6 @@ export default function CartPage() {
 
   const handleBuyNow = () => {
     alert("Thank you for your purchase! (simulate checkout)");
-    // Tutaj możesz np. wyczyścić koszyk lub przekierować do strony płatności
   };
 
   if (!auth.currentUser) {

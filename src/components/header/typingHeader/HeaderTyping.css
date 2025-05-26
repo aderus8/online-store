@@ -2,49 +2,18 @@
     text-align: center;
     margin-bottom: 2rem;
     max-width: 100%;
-    /* padding: 0rem 2rem; */
 }
 .header-container-small {
     text-align: center;
     margin-bottom: 2rem;
     padding: 0 7%;
     max-width: 100%;
-    /* padding: 0rem 2rem; */
 }
 
-/* .header-container::after {
-    content: '';
-    display: block;
-    height: 4px;
-    width: 0;
-    margin: 0 auto;
-    margin-top: 14px;
-    background: linear-gradient(to right, #555, #888, #555);
-    box-shadow: 0 0 5px rgba(138, 138, 138, 0.7);
-    /* subtelny efekt świetlny */
-    /* animation: drawLine 1.5s ease-out forwards; */
-    /* border-radius: 20px; */
-
-/* } */
-
-
-/* Tryb ciemny - metaliczny szary z ciemniejszym cieniem */
 body.dark .header-container::after {
     background: linear-gradient(to right, #fff2b2, #ffd700, #ffaa00);
-    /* ciemniejszy metaliczny szary */
     box-shadow: 0 0 5px rgba(85, 85, 85, 0.6);
-    /* delikatniejszy cień */
 }
-
-
-
-/* Animacja linii */
-/* @keyframes drawLine {
-    to {
-        width: 180px;
-    }
-} */
-
 
 .typing-effect, .typing-effect-small {
     max-width: 100%;
@@ -65,8 +34,7 @@ body.dark .header-container::after {
     animation: fadeInChar 0.1s ease forwards;
     color:#6d6d6d;
     text-shadow: 1px 1px 5px #6d6d6d65;
-      font-size: clamp(1rem, 2vw, 1.6rem);
-
+    font-size: clamp(1rem, 2vw, 1.6rem);
 }
 
 
@@ -95,7 +63,6 @@ body.dark .typing-effect h2{
 
 body.dark .header-container::after {
     background: linear-gradient(to right, #fefefe, #e1dcdc, #888); 
-    /* box-shadow: 0 0 3px rgba(188, 144, 1, 0.445);  */
 }
 
 @keyframes fadeInSubtitle {
@@ -104,12 +71,10 @@ body.dark .header-container::after {
     }
 }
 
-/* Tryb ciemny */
 body.dark .typing-subtitle {
     color: #ccc;
 }
 
-/* Responsywność */
 @media (max-width: 600px) {
     .typing-effect {
         font-size: 1.4rem;
@@ -118,6 +83,4 @@ body.dark .typing-subtitle {
     .typing-subtitle {
         font-size: 1rem;
     }
-
-
 }

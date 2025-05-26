@@ -10,7 +10,7 @@ import {
   FaSignOutAlt,
   FaHeart
 } from 'react-icons/fa';
-import { auth } from '../firebase';
+import { auth } from '../firebase/firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import './Navbar.css';
 import AOS from 'aos';
@@ -24,7 +24,6 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [user, setUser] = useState(null);
 
-  // 🔗 Linki
   const commonLinks = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
@@ -38,11 +37,7 @@ const Navbar = () => {
     { to: '/cart', label: 'Cart' },
   ];
 
-  const guestLinks = [
-    // { to: '/auth', label: 'Account' },
-  ];
-
-  const toggleMenu = () => {
+    const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
   };
 
@@ -87,8 +82,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div>
-        {/* <NavLink to="/" className="nav-logo">Logo</NavLink> */}
-        {user ? <p> User</p> : <p>Guest</p>}
+        <NavLink to="/" className="nav-logo">Online Store</NavLink>
       </div>
 
       {!isMobile && (

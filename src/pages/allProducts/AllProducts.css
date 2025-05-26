@@ -13,112 +13,70 @@
 
 .offer-side {
     width: 22%;
-    /* Sidebar zajmuje 20% szerokości */
     padding: 50px 2%;
-    /* Padding wewnętrzny */
     box-sizing: border-box;
-    /* Wlicza padding i border do rozmiaru elementu */
     max-height: calc(100vh - 80px);
-    /* Maksymalna wysokość sidebara: 100% wysokości widocznej strony minus wysokość nagłówka */
     overflow-y: auto;
-    /* Dodanie scrolla pionowego, jeśli zawartość wykracza poza wysokość */
     position: sticky;
-    /* Sticky sidebar, który pozostaje widoczny podczas przewijania */
     top: 80px;
-    /* Sidebar zaczyna być "przyklejony" 80px od góry */
     font-size: clamp(1rem, 5vw, 1.6rem);
-    /* line-height: 1.6; */
     margin-bottom: 1.5rem;
     font-family: 'Satoshi', sans-serif;
     letter-spacing: 1px;
 }
 
 .offer-side-title {
-    /* Rozmiar czcionki */
     margin-bottom: 20px;
-    /* Odstęp od dołu */
     font-weight: bold;
-    /* Pogrubienie czcionki */
     border-bottom: 1px solid #ccc;
-    /* Dolna linia oddzielająca tytuł */
     padding-bottom: 10px;
-    /* Padding na dole tytułu */
     letter-spacing: 1px;
-    /* Rozmiar czcionki */
-
 }
 
-/* Grupy filtrów */
 .filter-group {
     margin-bottom: 30px;
-    /* Odstęp między grupami filtrów */
 }
 
 .filter-group h6 {
     margin-bottom: 10px;
-    /* Odstęp od dołu */
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-    /* line-height: 1.6; */
     font-family: 'Satoshi', sans-serif;
     letter-spacing: 1px;
-    /* Rozmiar czcionki */
     font-weight: 600;
-    /* Pogrubienie czcionki */
     color: #333;
-    /* Kolor czcionki */
 }
 
 .filter-group label {
     display: block;
-    /* Etykiety filtra na pełną szerokość */
     margin-bottom: 8px;
-    /* Odstęp między etykietami */
     font-size: 14px;
-    /* Rozmiar czcionki */
     cursor: pointer;
-    /* Kursor zmienia się na rękę */
     color: #555;
-    /* Kolor czcionki */
 }
 
 .filter-group label:hover {
     color: #000000;
-    /* Kolor czcionki */
 
 }
 
 .filter-group input[type="checkbox"],
 .filter-group input[type="radio"] {
     margin-right: 8px;
-    /* Odstęp między checkboxem/radiobuttonem a etykietą */
 }
 
-/* Przycisk zastosowania filtrów */
 .apply-filters-button {
     background-color: #111;
-    /* Ciemne tło przycisku */
     color: white;
-    /* Kolor tekstu na biały */
     border: none;
-    /* Brak obramowania */
     padding: 12px 20px;
-    /* Padding wewnętrzny */
     border-radius: 20px;
-    /* Zaokrąglone rogi */
     font-size: 14px;
-    /* Rozmiar czcionki */
     font-weight: bold;
-    /* Pogrubienie czcionki */
     width: 100%;
-    /* Szerokość przycisku na 100% */
     cursor: pointer;
-    /* Kursor zmienia się na rękę */
     transition: background-color 0.3s ease;
     letter-spacing: 1px;
     margin-bottom: 5px;
-    /* Rozmiar czcionki */
-
-    /* Płynna zmiana koloru przy najechaniu */
 }
 .clear{
     background-color: transparent;
@@ -129,25 +87,19 @@
 
 .apply-filters-button:hover {
     background-color: #757575;
-    /* Zmiana koloru tła przy najechaniu */
 }
 
-/* Scrollbar dla sidebara */
 .offer-side::-webkit-scrollbar {
     width: 6px;
-    /* Szerokość paska przewijania */
 }
 
 .offer-side::-webkit-scrollbar-thumb {
     background-color: #ccc;
-    /* Kolor paska przewijania */
     border-radius: 3px;
-    /* Zaokrąglenie paska */
 }
 
 .offer-side::-webkit-scrollbar-thumb:hover {
     background-color: #aaa;
-    /* Zmiana koloru paska przy najechaniu */
 }
 
 
@@ -158,9 +110,6 @@
     flex-direction: column;
 }
 
-.offer-header {
-    /* min-height: 100px; */
-}
 
 .offer-filters {
     display: flex;
@@ -169,8 +118,6 @@
     align-items: center;
     padding: 10px 5%;
     letter-spacing: 1px;
-    /* Rozmiar czcionki */
-
 }
 
 .offer-filters button {
@@ -186,8 +133,6 @@
     transition: background-color 0.2s ease;
     color: black;
     letter-spacing: 1px;
-    /* Rozmiar czcionki */
-
 }
 
 .filter-icon {
@@ -203,37 +148,28 @@
 
 .offer-products-container {
     display: grid;
-    /* Użycie CSS Grid do tworzenia siatki */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* Kolumny o minimalnej szerokości 250px, z automatycznym wypełnieniem dostępnej przestrzeni */
     gap: 30px;
-    /* Odstęp między kartami produktów */
     padding: 30px 60px;
-    /* Padding wewnętrzny */
     width: 100%;
-    /* Szerokość na 100% */
     box-sizing: border-box;
-    /* Wlicza padding i border do rozmiaru elementu */
 }
 
 @media (min-width: 1100px) {
     .offer-products-container {
         grid-template-columns: repeat(3, 1fr) !important;
-        /* Maksymalnie 3 kolumny na szerokich ekranach */
     }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
     .offer-products-container {
         grid-template-columns: repeat(3, 1fr);
-        /* Maksymalnie 3 kolumny na szerokich ekranach */
     }
 }
 
 @media (min-width: 768px) {
     .offer-products-container {
         grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-        /* Kolumny o minimalnej szerokości 200px */
     }
 
 }
@@ -241,11 +177,8 @@
 @media (max-width: 768px) {
     .offer-products-container {
         grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
-        /* Kolumny o minimalnej szerokości 200px */
         gap: 15px;
-        /* Odstęp między kartami produktów */
         width: 100%;
-        /* Szerokość na 100% */
         padding: 10px;
     }
 
@@ -254,35 +187,26 @@
 @media (max-width: 600px) {
     .product-buttons {
         flex-direction: column;
-        /* Zmiana układu przycisków na kolumnowy */
         align-items: center;
-        /* Wyrównanie przycisków do środka */
         gap: 10px;
-        /* Odstęp między przyciskami */
     }
 
     .offer-products-container {
         grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-        /* Kolumny o minimalnej szerokości 200px */
         gap: 10px;
-        /* Odstęp między kartami produktów */
         width: 100%;
-        /* Szerokość na 100% */
         padding: 1px;
     }
 
     .add-to-cart,
     .view-details-button {
         width: 90%;
-        /* Przycisk zajmuje 90% szerokości */
     }
 }
 
 @media (max-width: 500px) {
     .offer-products-container {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        /* Kolumny o minimalnej szerokości 200px */
-
     }
 }
 
@@ -302,40 +226,29 @@
 
     .filter-group h3 {
         margin-bottom: 10px;
-        /* Odstęp od dołu */
-        /* font-size: 20px; Rozmiar czcionki */
         font-weight: 600;
-        /* Pogrubienie czcionki */
         color: #333;
-        /* Kolor czcionki */
     }
 
     .filter-group label {
         font-size: 22px;
-        /* Rozmiar czcionki */
     }
 
     .filter-group label:hover {
         color: #000000;
-        /* Kolor czcionki */
-
     }
 
     .filter-group input[type="checkbox"],
     .filter-group input[type="radio"] {
         margin-right: 8px;
-        /* Odstęp między checkboxem/radiobuttonem a etykietą */
     }
 
-    /* Przycisk zastosowania filtrów */
     .apply-filters-button {
         width: 60%;
-        /* Szerokość przycisku na 100% */
         margin-left: 20%;
     }
 }
 
-/* Tryb ciemny dla sidebara */
 body.dark .offer-side {
     background-color: #1e1e1e;
     color: #f0f0f0;
@@ -355,7 +268,6 @@ body.dark .filter-group label:hover {
     color: #fff;
 }
 
-/* Tryb ciemny dla przycisku */
 body.dark .apply-filters-button {
     background-color: #333;
     color: #f0f0f0;
@@ -365,7 +277,6 @@ body.dark .apply-filters-button:hover {
     background-color: #555;
 }
 
-/* Tryb ciemny – scrollbar */
 body.dark .offer-side::-webkit-scrollbar-thumb {
     background-color: #555;
 }
@@ -376,4 +287,39 @@ body.dark .offer-side::-webkit-scrollbar-thumb:hover {
 
 body.dark .offer-filters button {
     color: white;
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  padding: 0 5%;
+}
+
+.filter-tag {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.filter-tag .remove-icon {
+  margin-left: 8px;
+  cursor: pointer;
+  color: #555;
+}
+
+.clear-all-button {
+  margin-left: auto;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }

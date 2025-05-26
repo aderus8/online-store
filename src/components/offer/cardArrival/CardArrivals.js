@@ -8,7 +8,6 @@ const CardArrivals = ({img, title, subtitle}) => {
       <div className="card-arrivals-content">
         <h6> {title}</h6>
         <p> {subtitle}</p>
-        {/* <button>Explore </button> */}
       </div>
     </div>
   );

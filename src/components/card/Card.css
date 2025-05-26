@@ -7,12 +7,10 @@
   cursor: pointer;
   min-width: 200px;
   max-width: 200px;
-  /* Zapewnia, że karty nie będą większe niż 200px */
   height: 300px;
   z-index: 0;
   border: 1px solid rgb(99, 99, 99);
   flex-grow: 1;
-  /* Karty mogą rosnąć, ale będą miały stałą szerokość */
 }
 .card:hover {
   transform: scale(1.1);
@@ -28,7 +26,6 @@
   width: 100%;
   object-fit: cover;
 }
-  /* Gradient + tekst overlay */
   .cardOverlay {
     position: absolute;
     padding: 0 1rem 1rem 1rem;
@@ -48,7 +45,6 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
   }
   
-    /* Imię i nazwisko */
     .cardTitle {
       font-weight: 900;
       font-size: 1rem;
@@ -56,14 +52,12 @@
       margin-bottom: 0.2rem;
     }
     
-    /* Rola */
     .cardRole {
       font-size: 0.85rem;
       color: #cccccc;
       margin-bottom: 0.3rem;
     }
     
-    /* Opis */
     .cardDescription {
       font-style: italic;
       font-size: 0.75rem;
@@ -71,17 +65,15 @@
       display: none;
     }
     
-    /* Pokazuje opis tylko przy hoverze */
     .card:hover .cardDescription {
       display: block;
     }
     
-    /* Responsywność */
     @media (max-width: 768px) {
       .card {
-        min-width: 150px; /* Zmniejsza minimalną szerokość karty na mniejszych ekranach */
+        min-width: 150px;
         max-width: 150px;
-        height: 250px; /* Zmniejsza wysokość karty */
+        height: 250px; 
       }
     
       .card-container {
@@ -91,9 +83,9 @@
     
     @media (max-width: 600px) {
       .card {
-        min-width: 120px; /* Jeszcze mniejsza szerokość karty na bardzo małych ekranach */
+        min-width: 120px; 
         max-width: 120px;
-        height: 200px; /* Dostosowuje wysokość karty */
+        height: 200px; 
       }
     }
     
