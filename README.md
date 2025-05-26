@@ -22,6 +22,7 @@ Routing and navigation with React Router
 Hosted on Vercel
 
 
+
 Technologies Used
 
 React.js
@@ -41,6 +42,7 @@ CSS Modules / custom styles
 Toastify for notifications
 
 Vercel for deployment
+
 
 
 Notes
